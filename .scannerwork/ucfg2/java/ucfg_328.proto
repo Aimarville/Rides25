@@ -1,0 +1,45 @@
+
+!domain.RideBooked#getRidePrice()F`
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.java| |("1*‚
+1} }(Q
+O
+} }(
+%0java.io.PrintStream"__id*"
+
+__unknown_file (
+""b
+`
+} }(
+%1domain.Ride"__id*;
+
+__unknown_file (*
+domain.RideBooked"
+rideÒÏ
+} }(
+
+%2void"0java.io.PrintStream#println(Ljava/lang/Object;)V*7
+
+__unknown_file (
+
+%0java.io.PrintStream*/
+
+__unknown_file (
+
+%1domain.Ride2println(Ljava/lang/Object;)b
+`
+~	 ~(
+%3domain.Ride"__id*;
+
+__unknown_file (*
+domain.RideBooked"
+rideom
+~	 ~(
+%4float"domain.Ride#getPrice()F*/
+
+__unknown_file (
+
+%3domain.Ride2
+getPrice()"
+~ ~(
+""B
+domain.RideBookedHX

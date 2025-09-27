@@ -1,0 +1,268 @@
+
+'domain.Ride#equals(Ljava/lang/Object;)Z\
+PD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Ride.javaÍ Í("startingBlock*%
+1
+ı	 ı("
+
+ı ı(
+""*%
+2
+Û
+ Û("
+
+Û Û(
+""*º
+3
+Úf Ú(jb
+`
+
+Úf Ú(o
+%14java.util.Date"__id*5
+
+__unknown_file (*
+domain.Ride"
+datej
+h
+Úw Ú(Å
+%15java.util.Date"__id*<
+
+__unknown_file ( *
+
+otherdomain.Ride"
+date“œ
+Úf Ú(Ç
+%16boolean"*java.util.Date#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%14java.util.Date*3
+
+__unknown_file (
+
+%15java.util.Date2equals(Ljava/lang/Object;)*
+2
+1*ç
+startingBlock
+Í Í("ç
+ä
+
+È È(
+
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectZ
+X
+
+Í Í(!
+objjava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%17*
+12*¿
+4
+ÚJ Ú(Nb
+`
+
+ÚJ Ú(Q
+%11java.lang.String"__id*3
+
+__unknown_file (*
+domain.Ride"
+toi
+g
+
+ÚY Ú(a
+%12java.lang.String"__id*:
+
+__unknown_file (*
+
+otherdomain.Ride"
+to◊‘
+
+ÚJ Ú(b
+%13boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%12java.lang.String2equals(Ljava/lang/Object;)*
+3
+1*≥
+5
+Ú& Ú(*b
+`
+
+Ú& Ú(1
+%8domain.Driver"__id*7
+
+__unknown_file (*
+domain.Ride"
+driveri
+g
+
+Ú9 Ú(E
+%9domain.Driver"__id*>
+
+__unknown_file ("* 
+
+otherdomain.Ride"
+driver «
+
+Ú& Ú(F
+%10boolean"'domain.User#equals(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%8domain.Driver*1
+
+__unknown_file (
+
+%9domain.Driver2equals(Ljava/lang/Object;)*
+4
+1*¢
+6
+Ò Ò(a
+_
+
+Ò Ò(
+otherdomain.Ride"__id*5
+
+__unknown_file (
+
+objjava.lang.Objectc
+a
+
+Ú Ú(
+%5java.lang.String"__id*5
+
+__unknown_file (*
+domain.Ride"
+fromj
+h
+
+Ú Ú(!
+%6java.lang.String"__id*<
+
+__unknown_file ( *
+
+otherdomain.Ride"
+from‘—
+
+Ú Ú("
+%7boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%5java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String2equals(Ljava/lang/Object;)*
+5
+1*%
+7
+
+ ("
+
+ (
+""*—
+8
+Ô Ô(
+çä
+
+Ô Ô(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*+
+
+__unknown_file (
+domain.Ride2
+getClass()óî
+
+Ô Ô('
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()ç
+ä
+
+Ô Ô('
+%4boolean"	__compare*
+
+Ô Ô(
+!=*%
+
+Ô Ô(
+
+%2java.lang.Class*%
+
+Ô Ô('
+
+%3java.lang.Class*
+6
+7*%
+9
+Ó
+ Ó("
+
+Ó Ó(
+""*ó
+10
+Ì Ì(	}
+{
+
+Ì Ì(
+%1boolean"	__compare*
+
+Ì
+ Ì(
+==*'
+
+Ì Ì(	
+
+objjava.lang.Object*
+
+Ì Ì(
+""*
+8
+9*&
+11
+Ï
+ Ï("
+
+Ï Ï(
+""*§
+12
+Î Î(
+á
+Ñ
+
+Î Î(
+%0boolean"	__compare*
+
+Î Î(
+==*
+
+Î Î(
+
+domain.Ride*'
+
+Î Î(
+
+objjava.lang.Object*
+10
+11:%
+
+Í Í(!
+objjava.lang.ObjectB
+domain.RideHX

@@ -1,0 +1,6 @@
+%this9 9("domain.RideBooked
+bookNumber9 9()"int"<,
+*
+: :("#set-field# bookNumber:
+
+; ;(*VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.java

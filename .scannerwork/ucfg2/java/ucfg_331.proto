@@ -1,0 +1,25 @@
+
+3domain.RideBooked#getRideBookings()Ljava/util/List;b
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.javaâ â(("1*Æ
+1
+ä	 ä(d
+b
+
+ä	 ä(
+%0domain.Ride"__id*;
+
+__unknown_file (*
+domain.RideBooked"
+rideêç
+
+ä	 ä(
+%1java.util.List")domain.Ride#getBookings()Ljava/util/List;*/
+
+__unknown_file (
+
+%0domain.Ride2getBookings()"$
+
+ä ä(
+
+%1java.util.ListB
+domain.RideBookedH

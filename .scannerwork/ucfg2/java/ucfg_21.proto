@@ -1,0 +1,51 @@
+
+HdataAccess.DataAccess#getRidesDriver(Ljava/lang/String;)Ljava/util/List;f
+ZD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/dataAccess/DataAccess.javaø ø(!"1*
+1
+ú ú(Q
+O
+
+ú ú(
+ridesjava.util.List"__id*"
+
+__unknown_file (
+""M
+K
+
+û û(
+drdomain.Driver"__id*"
+
+__unknown_file (
+""M
+K
+
+ü ü($
+drdomain.Driver"__id*"
+
+__unknown_file (
+""‹
+
+ş
+ ş(
+%0java.util.List"(domain.Driver#getRides()Ljava/util/List;*1
+
+__unknown_file (
+
+drdomain.Driver2
+getRides()a
+_
+
+ş ş(
+ridesjava.util.List"__id*2
+
+__unknown_file (
+
+%0java.util.List"'
+
+€ €(
+
+ridesjava.util.List:(
+
+ø" ø(/
+dGmailjava.lang.StringB
+dataAccess.DataAccessH

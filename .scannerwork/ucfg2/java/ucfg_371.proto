@@ -1,0 +1,55 @@
+
+/domain.Mugimenduak#toString()Ljava/lang/String;a
+WD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Mugimenduak.javaK K("1*À
+1L	 L(m
+k
+L	 L(
+%0java.lang.String"__id*A
+
+__unknown_file (%*#
+domain.Mugimenduak"
+	egindakoag
+e
+L	 L(
+%1java.lang.String"__concat*$
+L	 L(
+
+%0java.lang.String*
+L L(
+/h
+f
+L	 L(
+%2java.lang.String"__concat*$
+L	 L(
+
+%1java.lang.String*
+L L(
+""g
+e
+L	 L(
+%3java.lang.String"__concat*$
+L	 L(
+
+%2java.lang.String*
+L L(
+/f
+d
+L  L($
+%4java.util.Date"__id*<
+
+__unknown_file ( *
+domain.Mugimenduak"
+datex
+v
+L	 L($
+%5java.lang.String"__concat*$
+L	 L(
+
+%3java.lang.String*"
+L  L($
+
+%4java.util.Date"$
+L L(%
+
+%5java.lang.StringB
+domain.MugimenduakH

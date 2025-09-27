@@ -1,0 +1,58 @@
+
+'domain.Car#toString()Ljava/lang/String;Y
+OD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Car.java6 6("1*¸
+17	 7(h
+f
+7	 7(
+%0java.lang.String"__id*<
+
+__unknown_file ( *
+
+domain.Car"
+licensePlateg
+e
+7	 7(
+%1java.lang.String"__concat*$
+7	 7(
+
+%0java.lang.String*
+7 7(
+/a
+_
+7 7(
+%2java.lang.String"__id*5
+
+__unknown_file (*
+
+domain.Car"
+brandz
+x
+7	 7(
+%3java.lang.String"__concat*$
+7	 7(
+
+%1java.lang.String*$
+7 7(
+
+%2java.lang.Stringg
+e
+7	 7(#
+%4java.lang.String"__concat*$
+7	 7(
+
+%3java.lang.String*
+7  7(#
+/h
+f
+7	 7()
+%5java.lang.String"__concat*$
+7	 7(#
+
+%4java.lang.String*
+7$ 7()
+"""$
+7 7(*
+
+%5java.lang.StringB
+
+domain.CarH

@@ -1,0 +1,106 @@
+
+©testOperations.TestBusinessLogic#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLdomain/Car;)Ldomain/Driver;o
+eD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/test/java/testOperations/TestBusinessLogic.java/ /(!"1*¸
+10 0(ç
+ä
+0 0(#
+%0testOperations.TestDataAccess"__id*S
+
+__unknown_file (7*5"
+ testOperations.TestBusinessLogic"
+dbManagerTestãà
+0 0(
+
+%1void"%testOperations.TestDataAccess#open()V*A
+
+__unknown_file (%
+#
+%0testOperations.TestDataAccess2open()ç
+ä
+1 1(#
+%2testOperations.TestDataAccess"__id*S
+
+__unknown_file (7*5"
+ testOperations.TestBusinessLogic"
+dbManagerTestóî
+1 1(b
+%3domain.Driver"¶testOperations.TestDataAccess#addDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLdomain/Car;)Ldomain/Driver;*A
+
+__unknown_file (%
+#
+%2testOperations.TestDataAccess*7
+
+__unknown_file (
+
+emailjava.lang.String*6
+
+__unknown_file (
+
+namejava.lang.String*6
+
+__unknown_file (
+
+fromjava.lang.String*4
+
+__unknown_file (
+
+tojava.lang.String*4
+
+__unknown_file (
+
+datejava.util.Date*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*/
+
+__unknown_file (
+
+car
+domain.Car2yaddDriverWithRide(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;IFLdomain/Car;)^
+\
+1 1(c
+driverdomain.Driver"__id*1
+
+__unknown_file (
+
+%3domain.Driverç
+ä
+2 2(#
+%4testOperations.TestDataAccess"__id*S
+
+__unknown_file (7*5"
+ testOperations.TestBusinessLogic"
+dbManagerTestçä
+2 2(
+
+%5void"&testOperations.TestDataAccess#close()V*A
+
+__unknown_file (%
+#
+%4testOperations.TestDataAccess2close()"%
+3 3(
+
+driverdomain.Driver:%
+/" /(/
+emailjava.lang.String:$
+/0 /(<
+namejava.lang.String:$
+/= /(I
+fromjava.lang.String:"
+/J /(T
+tojava.lang.String:"
+/V /(`
+datejava.util.Date: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"":
+	/{ /(Ç
+car
+domain.CarB$"
+ testOperations.TestBusinessLogicH

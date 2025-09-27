@@ -1,0 +1,79 @@
+
+1domain.Erreklamazioa#toString()Ljava/lang/String;c
+YD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Erreklamazioa.java\ \("1*
+1]	 ](U
+S
+]	 ](
+%0java.lang.String"__concat*
+]	 ](
+""*
+] ](
+/j
+h
+] ](
+%1domain.Passenger"__id*>
+
+__unknown_file ("* 
+domain.Erreklamazioa"
+passz
+x
+]	 ](
+%2java.lang.String"__concat*$
+]	 ](
+
+%0java.lang.String*$
+] ](
+
+%1domain.Passengerg
+e
+]	 ](
+%3java.lang.String"__concat*$
+]	 ](
+
+%2java.lang.String*
+] ](
+/e
+c
+] ](
+%4domain.Ride"__id*>
+
+__unknown_file ("* 
+domain.Erreklamazioa"
+rideu
+s
+]	 ](
+%5java.lang.String"__concat*$
+]	 ](
+
+%3java.lang.String*
+] ](
+
+%4domain.Rideg
+e
+]	 ](#
+%6java.lang.String"__concat*$
+]	 ](
+
+%5java.lang.String*
+]  ](#
+/d
+b
+]$ ](%
+%7domain.Driver"__id*;
+
+__unknown_file (*
+domain.Erreklamazioa"
+dw
+u
+]	 ](%
+%8java.lang.String"__concat*$
+]	 ](#
+
+%6java.lang.String*!
+]$ ](%
+
+%7domain.Driver"$
+] ](&
+
+%8java.lang.StringB
+domain.ErreklamazioaH

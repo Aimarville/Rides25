@@ -1,0 +1,24 @@
+
+2domain.Erreklamazioa#getDEmail()Ljava/lang/String;c
+YD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Erreklamazioa.javaS S("1*ª
+1T	 T(
+d
+b
+T	 T(
+
+%0domain.Driver"__id*;
+
+__unknown_file (*
+domain.Erreklamazioa"
+dŽ‹
+T	 T(
+%1java.lang.String"(domain.User#getEmail()Ljava/lang/String;*1
+
+__unknown_file (
+
+%0domain.Driver2
+getEmail()"$
+T T(
+
+%1java.lang.StringB
+domain.ErreklamazioaH

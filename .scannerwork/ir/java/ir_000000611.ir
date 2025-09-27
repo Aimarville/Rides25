@@ -1,0 +1,13 @@
+
+"/"java.lang.String%this^ ^("domain.RideBooked"¥2
+0
+_	 _("#get-field# ride:Bdomain.Ride1
+/
+_ _(!"#get-field# seatsBooked:Bint1
+/
+_& _(-"#get-field# aproved:Bboolean<
+:
+_6 _(?"#get-field# passenger:Bdomain.Passenger;
+9
+_	 _(?"	#binop +#2+:	Bjava.lang.String
+_ _(@*VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.java

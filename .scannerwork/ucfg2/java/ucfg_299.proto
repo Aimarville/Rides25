@@ -1,0 +1,111 @@
+
+(domain.Ride#toString()Ljava/lang/String;\
+PD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Ride.javaÃ Ã("1*•	
+1
+Ä	 Ä(c
+a
+
+Ä	 Ä(
+%0java.lang.String"__id*5
+
+__unknown_file (*
+domain.Ride"
+fromm
+k
+
+Ä	 Ä(
+%1java.lang.String"__concat*&
+
+Ä	 Ä(
+
+%0java.lang.String*
+
+Ä Ä(
+/a
+_
+
+Ä Ä(
+%2java.lang.String"__id*3
+
+__unknown_file (*
+domain.Ride"
+to€
+~
+
+Ä	 Ä(
+%3java.lang.String"__concat*&
+
+Ä	 Ä(
+
+%1java.lang.String*&
+
+Ä Ä(
+
+%2java.lang.Stringm
+k
+
+Ä	 Ä(
+%4java.lang.String"__concat*&
+
+Ä	 Ä(
+
+%3java.lang.String*
+
+Ä Ä(
+/a
+_
+
+Ä Ä(
+%5java.util.Date"__id*5
+
+__unknown_file (*
+domain.Ride"
+date~
+|
+
+Ä	 Ä(
+%6java.lang.String"__concat*&
+
+Ä	 Ä(
+
+%4java.lang.String*$
+
+Ä Ä(
+
+%5java.util.Datem
+k
+
+Ä	 Ä(!
+%7java.lang.String"__concat*&
+
+Ä	 Ä(
+
+%6java.lang.String*
+
+Ä Ä(!
+/b
+`
+
+Ä" Ä((
+%8domain.Driver"__id*7
+
+__unknown_file (*
+domain.Ride"
+driver}
+{
+
+Ä	 Ä((
+%9java.lang.String"__concat*&
+
+Ä	 Ä(!
+
+%7java.lang.String*#
+
+Ä" Ä((
+
+%8domain.Driver"&
+
+Ä Ä()
+
+%9java.lang.StringB
+domain.RideH

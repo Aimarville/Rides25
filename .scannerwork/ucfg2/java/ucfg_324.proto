@@ -1,0 +1,87 @@
+
+.domain.RideBooked#toString()Ljava/lang/String;`
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.java^ ^("1*Ý
+1_	 _(b
+`
+_	 _(
+%0domain.Ride"__id*;
+
+__unknown_file (*
+domain.RideBooked"
+rideb
+`
+_	 _(
+%1java.lang.String"__concat*
+_	 _(
+
+%0domain.Ride*
+_ _(
+/g
+e
+_	 _(
+%2java.lang.String"__concat*$
+_	 _(
+
+%1java.lang.String*
+_ _(
+/h
+f
+_	 _(!
+%3java.lang.String"__concat*$
+_	 _(
+
+%2java.lang.String*
+_ _(!
+""g
+e
+_	 _(%
+%4java.lang.String"__concat*$
+_	 _(!
+
+%3java.lang.String*
+_" _(%
+/h
+f
+_	 _(-
+%5java.lang.String"__concat*$
+_	 _(%
+
+%4java.lang.String*
+_& _(-
+""g
+e
+_	 _(1
+%6java.lang.String"__concat*$
+_	 _(-
+
+%5java.lang.String*
+_. _(1
+/g
+e
+_	 _(5
+%7java.lang.String"__concat*$
+_	 _(1
+
+%6java.lang.String*
+_2 _(5
+/l
+j
+_6 _(?
+%8domain.Passenger"__id*@
+
+__unknown_file ($*"
+domain.RideBooked"
+	passengerz
+x
+_	 _(?
+%9java.lang.String"__concat*$
+_	 _(5
+
+%7java.lang.String*$
+_6 _(?
+
+%8domain.Passenger"$
+_ _(@
+
+%9java.lang.StringB
+domain.RideBookedH

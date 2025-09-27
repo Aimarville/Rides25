@@ -1,0 +1,78 @@
+
+0businessLogic.BLFacadeImplementation#decline(I)Zu
+iD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/businessLogic/BLFacadeImplementation.javaÀ À("1*¡
+1
+Á Á(R
+P
+
+Á Á(
+resjava.lang.Boolean"__id*"
+
+__unknown_file (
+""‡
+„
+
+Â Â(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+Â Â(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+Ã Ã(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager¬©
+
+Ã Ã(%
+%3boolean"!dataAccess.DataAccess#decline(I)Z*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*"
+
+__unknown_file (
+""2
+decline(I)[
+Y
+
+Ã Ã(%
+resjava.lang.Boolean"__id*+
+
+__unknown_file (
+
+%3boolean‡
+„
+
+Ä Ä(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Ä Ä(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"
+
+Å Å(
+"": 
+
+__unknown_file (
+""B(&
+$businessLogic.BLFacadeImplementationHX

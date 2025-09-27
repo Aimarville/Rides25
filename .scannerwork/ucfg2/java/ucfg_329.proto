@@ -1,0 +1,26 @@
+
+2domain.RideBooked#getPassEmail()Ljava/lang/String;b
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.javaÅ Å("1*Ω
+1
+Ç	 Ç(n
+l
+
+Ç	 Ç(
+%0domain.Passenger"__id*@
+
+__unknown_file ($*"
+domain.RideBooked"
+	passengerìê
+
+Ç	 Ç(
+%1java.lang.String"(domain.User#getEmail()Ljava/lang/String;*4
+
+__unknown_file (
+
+%0domain.Passenger2
+getEmail()"&
+
+Ç Ç(
+
+%1java.lang.StringB
+domain.RideBookedH

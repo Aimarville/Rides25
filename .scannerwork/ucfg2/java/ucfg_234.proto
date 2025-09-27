@@ -1,0 +1,95 @@
+
+VbusinessLogic.BLFacadeImplementation#getAlertRides(Ljava/lang/String;)Ljava/util/List;u
+iD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/businessLogic/BLFacadeImplementation.javaÇ Ç(""startingBlock*‡
+startingBlock
+Ç" Ç(1†
+ƒ
+
+Æ Æ(
+%6"
+__annotate*)
+
+__unknown_file (
+	WebMethod*8
+
+__unknown_file (
+
+pGmailjava.lang.String\
+Z
+
+Ç* Ç(0
+pGmailjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6*
+1*¼
+1
+È È(‡
+„
+
+È È(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+È È(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+É É(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager†ƒ
+
+É É(4
+%3java.util.List"GdataAccess.DataAccess#getAlertRides(Ljava/lang/String;)Ljava/util/List;*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*8
+
+__unknown_file (
+
+pGmailjava.lang.String2!getAlertRides(Ljava/lang/String;)_
+]
+
+É É(5
+resjava.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.List‡
+„
+
+Ê Ê(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Ê Ê(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"%
+
+Ë Ë(
+
+resjava.util.List:(
+
+Ç# Ç(0
+pGmailjava.lang.StringB(&
+$businessLogic.BLFacadeImplementationH

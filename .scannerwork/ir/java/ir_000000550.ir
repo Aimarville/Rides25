@@ -1,0 +1,15 @@
+this ("
+domain.Car,licensePlate ("java.lang.String%brand! (-"java.lang.String%color/ (;"java.lang.Stringseats= (F"intdH (P"domain.Driver"ã.
+,
+ ( "#set-field# licensePlate:'
+%
+ ("#set-field# brand:'
+%
+ (	"#set-field# color:'
+%
+ (
+"#set-field# seats:(
+&
+ ("#set-field# driver:
+
+ (*OD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Car.java

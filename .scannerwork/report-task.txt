@@ -1,0 +1,7 @@
+organization=asieraldai
+projectKey=asieraldai_rides25-si2
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.67816
+dashboardUrl=https://sonarcloud.io/dashboard?id=asieraldai_rides25-si2
+ceTaskId=AZmKpIVjakHU-nSJVb_V
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZmKpIVjakHU-nSJVb_V

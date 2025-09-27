@@ -1,0 +1,25 @@
+
+3domain.RideBooked#getPassBookings()Ljava/util/List;b
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.javaÖ Ö(("1*»
+1
+Ü	 Ü(n
+l
+
+Ü	 Ü(
+%0domain.Passenger"__id*@
+
+__unknown_file ($*"
+domain.RideBooked"
+	passenger†ù
+
+Ü	 Ü(#
+%1java.util.List"1domain.Passenger#getBookedrides()Ljava/util/List;*4
+
+__unknown_file (
+
+%0domain.Passenger2getBookedrides()"$
+
+Ü Ü($
+
+%1java.util.ListB
+domain.RideBookedH

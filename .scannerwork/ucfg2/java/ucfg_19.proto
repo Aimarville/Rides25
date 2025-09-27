@@ -1,0 +1,71 @@
+
+HdataAccess.DataAccess#getMugimenduak(Ljava/lang/String;)Ljava/util/List;f
+ZD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/dataAccess/DataAccess.javaÊ Ê(("3*Ž
+2
+Ñ	 Ñ(–“
+
+Ñ	 Ñ(
+%1java.util.List",domain.User#getMugimenduak()Ljava/util/List;*/
+
+__unknown_file (
+
+usdomain.User2getMugimenduak()_
+]
+
+Ñ Ñ(
+emajava.util.List"__id*2
+
+__unknown_file (
+
+%1java.util.List*
+1*û
+3
+Ì Ì(O
+M
+
+Ì Ì(
+emajava.util.List"__id*"
+
+__unknown_file (
+""K
+I
+
+Í Í(
+usdomain.User"__id*"
+
+__unknown_file (
+""K
+I
+
+Î Î("
+usdomain.User"__id*"
+
+__unknown_file (
+""w
+u
+
+Ð Ð(
+%0boolean"	__compare*
+
+Ð Ð(
+
+!=*!
+
+Ð Ð(
+
+usdomain.User*
+
+Ð Ð(
+""*
+2
+1*6
+1
+Ó	 Ó("%
+
+Ó Ó(
+
+emajava.util.List:(
+
+Ê) Ê(6
+uGmailjava.lang.StringB
+dataAccess.DataAccessH

@@ -1,0 +1,141 @@
+
+0domain.Ride#removeBookRide(I)Ldomain/RideBooked;\
+PD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/Ride.javaÔ Ô(!"9*°
+2
+â â(e
+c
+
+â â(
+%7java.util.List"__id*9
+
+__unknown_file (*
+domain.Ride"
+
+bookings
+Œ
+
+â â(
+%8domain.RideBooked"__arrayRemove*2
+
+__unknown_file (
+
+%7java.util.List*"
+
+__unknown_file (
+"""&
+
+ã ã(
+
+rdomain.RideBooked*î
+6
+Ù Ù(	e
+c
+
+Ù Ù(
+%3java.util.List"__id*9
+
+__unknown_file (*
+domain.Ride"
+
+bookingsŒ
+‰
+
+Ù Ù(
+%4domain.RideBooked"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""c
+a
+
+Ù Ù(
+rdomain.RideBooked"__id*5
+
+__unknown_file (
+
+%4domain.RideBooked…‚
+
+Ú Ú(	
+%5int""domain.RideBooked#getBookNumber()I*4
+
+__unknown_file (
+
+rdomain.RideBooked2getBookNumber()o
+m
+
+Ú Ú($
+%6boolean"	__compare*
+
+Ú Ú(
+==*
+
+Ú Ú(
+	
+%5int*
+
+Ú Ú($
+""*	
+2
+7
+1*á
+7
+Ø Ø(e
+c
+
+Ø Ø('
+%0java.util.List"__id*9
+
+__unknown_file (*
+domain.Ride"
+
+bookingsmk
+
+Ø Ø(.	
+%1int"java.util.List#size()I*2
+
+__unknown_file (
+
+%0java.util.List2size()o
+m
+
+Ø Ø(.
+%2boolean"	__compare*
+
+Ø Ø(
+<=*
+
+Ø Ø(
+""*
+
+Ø Ø(.
+	
+%1int*	
+2
+6
+1*l
+9
+Õ Õ(P
+N
+
+× ×(
+rdomain.RideBooked"__id*"
+
+__unknown_file (
+""*	
+2
+7
+1*%
+1
+å
+ å("
+
+å å(
+"": 
+
+__unknown_file (
+""B
+domain.RideH

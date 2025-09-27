@@ -1,0 +1,173 @@
+
+wbusinessLogic.BLFacadeImplementation#addCar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Zu
+iD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/businessLogic/BLFacadeImplementation.javaş ş("startingBlock*º
+startingBlock
+ş ş(_‡
+„
+
+ı ı(
+%6"
+__annotate*)
+
+__unknown_file (
+	WebMethod*9
+
+__unknown_file (
+
+licensejava.lang.String]
+[
+
+ş  ş('
+licensejava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6…
+‚
+
+ı ı(
+%7"
+__annotate*)
+
+__unknown_file (
+	WebMethod*7
+
+__unknown_file (
+
+brandjava.lang.String[
+Y
+
+ş0 ş(5
+brandjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%7…
+‚
+
+ı ı(
+%8"
+__annotate*)
+
+__unknown_file (
+	WebMethod*7
+
+__unknown_file (
+
+colorjava.lang.String[
+Y
+
+ş> ş(C
+colorjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%8†
+ƒ
+
+ı ı(
+%9"
+__annotate*)
+
+__unknown_file (
+	WebMethod*8
+
+__unknown_file (
+
+dGmailjava.lang.String\
+Z
+
+şX ş(^
+dGmailjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%9*
+1*å	
+1
+ÿ ÿ(‡
+„
+
+ÿ ÿ(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+ÿ ÿ(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+€ €(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager¡
+
+€ €(F
+%3boolean"hdataAccess.DataAccess#addCar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Z*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*9
+
+__unknown_file (
+
+licensejava.lang.String*7
+
+__unknown_file (
+
+brandjava.lang.String*7
+
+__unknown_file (
+
+colorjava.lang.String*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+dGmailjava.lang.String2QaddCar(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)‡
+„
+
+ (
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+ (
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"
+
+‚ ‚(
+"":)
+
+ş ş((
+licensejava.lang.String:'
+
+ş) ş(6
+brandjava.lang.String:'
+
+ş7 ş(D
+colorjava.lang.String: 
+
+__unknown_file (
+"":(
+
+şQ ş(^
+dGmailjava.lang.StringB(&
+$businessLogic.BLFacadeImplementationHX

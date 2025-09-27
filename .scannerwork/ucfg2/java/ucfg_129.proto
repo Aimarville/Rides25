@@ -1,0 +1,131 @@
+
+'domain.User#equals(Ljava/lang/Object;)ZZ
+PD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/User.javaQ Q("startingBlock*!
+2] ]("
+] ](
+""*š
+3[ [(_
+]
+[ [(
+otherdomain.User"__id*5
+
+__unknown_file (
+
+objjava.lang.Objectb
+`
+\ \(
+%5java.lang.String"__id*6
+
+__unknown_file (*
+domain.User"
+emaili
+g
+\ \(
+%6java.lang.String"__id*=
+
+__unknown_file (!*
+
+otherdomain.User"
+emailÒÏ
+\ \( 
+%7boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%5java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String2equals(Ljava/lang/Object;)*
+2
+1*„
+startingBlockQ Q(#Š
+‡
+P P(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectW
+U
+Q Q("
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*
+9*!
+4Y Y("
+Y Y(
+""*Ã
+5X X(‹ˆ
+X X(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*+
+
+__unknown_file (
+domain.User2
+getClass()•’
+X X(#
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()…
+‚
+X X(#
+%4boolean"	__compare*
+X X(
+!=*#
+X X(
+
+%2java.lang.Class*#
+X X(#
+
+%3java.lang.Class*
+3
+4*!
+6V V("
+V V(
+""*Œ
+7U U(
+u
+s
+U U(
+%1boolean"	__compare*
+U U(
+==*%
+U U(
+
+
+objjava.lang.Object*
+U U(
+""*
+5
+6*!
+8S S("
+S S(
+""*•
+9R R(~
+|
+R R(
+%0boolean"	__compare*
+R R(
+==*
+R R(
+domain.User*%
+R R(
+
+objjava.lang.Object*
+7
+8*!
+1_ _("
+_ _(
+"":#
+Q Q("
+objjava.lang.ObjectB
+domain.UserHX

@@ -1,0 +1,102 @@
+
+WbusinessLogic.BLFacadeImplementation#getRidesDriver(Ljava/lang/String;)Ljava/util/List;u
+iD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(#"startingBlock*á
+startingBlock
+‚# ‚(2Ü
+É
+
+· ·(
+%6"
+__annotate*)
+
+__unknown_file (
+	WebMethod*8
+
+__unknown_file (
+
+dGmailjava.lang.String\
+Z
+
+‚+ ‚(1
+dGmailjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6*
+1*è	
+1
+„ „(O
+M
+
+„ „(
+resjava.util.List"__id*"
+
+__unknown_file (
+""á
+Ñ
+
+‰ ‰(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+‰ ‰(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()á
+Ñ
+
+Â	 Â(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManageràÖ
+
+Â	 Â()
+%3java.util.List"HdataAccess.DataAccess#getRidesDriver(Ljava/lang/String;)Ljava/util/List;*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*8
+
+__unknown_file (
+
+dGmailjava.lang.String2"getRidesDriver(Ljava/lang/String;)_
+]
+
+Â Â()
+resjava.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.Listá
+Ñ
+
+Ê Ê(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Ê Ê(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"%
+
+Á Á(
+
+resjava.util.List:(
+
+‚$ ‚(1
+dGmailjava.lang.StringB(&
+$businessLogic.BLFacadeImplementationH

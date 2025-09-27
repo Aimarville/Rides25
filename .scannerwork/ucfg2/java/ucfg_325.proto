@@ -1,0 +1,178 @@
+
+-domain.RideBooked#equals(Ljava/lang/Object;)Z`
+VD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/domain/RideBooked.javac c("startingBlock*!
+2l
+ l("
+l l(
+""*­
+3kW k([b
+`
+kW k(`
+%9domain.Ride"__id*;
+
+__unknown_file (*
+domain.RideBooked"
+ridej
+h
+kh k(r
+%10domain.Ride"__id*B
+
+__unknown_file (&*$
+
+otherdomain.RideBooked"
+rideÅÂ
+kW k(s
+%11boolean"'domain.Ride#equals(Ljava/lang/Object;)Z*/
+
+__unknown_file (
+
+%9domain.Ride*0
+
+__unknown_file (
+
+%10domain.Ride2equals(Ljava/lang/Object;)*
+2
+1*‡
+startingBlockc c("‹
+ˆ
+b b(
+
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectX
+V
+c c(!
+objjava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%12*
+11*È
+4k- k(1l
+j
+k- k(;
+%6domain.Passenger"__id*@
+
+__unknown_file ($*"
+domain.RideBooked"
+	passengers
+q
+kC k(R
+%7domain.Passenger"__id*G
+
+__unknown_file (+*)
+
+otherdomain.RideBooked"
+	passengerÍÊ
+k- k(S
+%8boolean"'domain.User#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%6domain.Passenger*4
+
+__unknown_file (
+
+%7domain.Passenger2equals(Ljava/lang/Object;)*
+3
+1*à
+5j" j(%e
+c
+j j(&
+otherdomain.RideBooked"__id*5
+
+__unknown_file (
+
+objjava.lang.Objectb
+`
+k k()
+%5boolean"	__compare*
+k k(
+==*
+k k(
+""*
+k k()
+""*
+4
+1*!
+6i
+ i("
+i i(
+""*É
+7h h(
+‘Ž
+h h(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*1
+
+__unknown_file (
+domain.RideBooked2
+getClass()•’
+h h('
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()…
+‚
+h h('
+%4boolean"	__compare*
+h h(
+!=*#
+h h(
+
+%2java.lang.Class*#
+h h('
+
+%3java.lang.Class*
+5
+6*!
+8g
+ g("
+g g(
+""*Œ
+9f f(	u
+s
+f f(
+%1boolean"	__compare*
+f
+ f(
+==*%
+f f(	
+
+objjava.lang.Object*
+f f(
+""*
+7
+8*"
+10e
+ e("
+e e(
+""*Ÿ
+11d d(
+…
+‚
+d d(
+%0boolean"	__compare*
+d d(
+==*!
+d d(
+
+domain.RideBooked*%
+d d(
+
+objjava.lang.Object*
+9
+10*!
+1n	 n("
+n n(
+"":#
+c c(!
+objjava.lang.ObjectB
+domain.RideBookedHX

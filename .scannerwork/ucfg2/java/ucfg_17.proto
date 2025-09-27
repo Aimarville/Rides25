@@ -1,0 +1,64 @@
+
+ydataAccess.DataAccess#getRideByEmail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;)Ldomain/Ride;f
+ZD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/dataAccess/DataAccess.java« «("1*£
+1
+¬ ¬(Q
+O
+
+¬ ¬(/
+driverdomain.Driver"__id*"
+
+__unknown_file (
+""S
+Q
+
+­ ­(
+%0java.io.PrintStream"__id*"
+
+__unknown_file (
+""Ú×
+
+­ ­(
+
+%1void"0java.io.PrintStream#println(Ljava/lang/Object;)V*7
+
+__unknown_file (
+
+%0java.io.PrintStream*5
+
+__unknown_file (
+
+driverdomain.Driver2println(Ljava/lang/Object;)S
+Q
+
+³ ³(
+%2java.io.PrintStream"__id*"
+
+__unknown_file (
+""¡ž
+
+³ ³(8
+%3" java.io.PrintStream#println([C)V*7
+
+__unknown_file (
+
+%2java.io.PrintStream*"
+
+__unknown_file (
+""2println([C)"
+
+µ µ(!
+"":'
+
+« «()
+emailjava.lang.String:&
+
+«* «(6
+fromjava.lang.String:$
+
+«7 «(A
+tojava.lang.String:$
+
+«B «(K
+datejava.util.DateB
+dataAccess.DataAccessH

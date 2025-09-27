@@ -1,0 +1,98 @@
+
+HbusinessLogic.BLFacadeImplementation#bidaiaEginda(ILjava/lang/String;I)Zu
+iD:/ASIER/LANAK/Uni/3.Maila/SI2/Proiektuak/Rides25/src/main/java/businessLogic/BLFacadeImplementation.javaÚ Ú("startingBlock*‡
+startingBlock
+Ú Ú(D†
+ƒ
+
+Ù Ù(
+%6"
+__annotate*)
+
+__unknown_file (
+	WebMethod*8
+
+__unknown_file (
+
+pGmailjava.lang.String\
+Z
+
+Ú6 Ú(<
+pGmailjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6*
+1*þ
+1
+Û Û(‡
+„
+
+Ü Ü(
+%0dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager|z
+
+Ü Ü(
+
+%1void"dataAccess.DataAccess#open()V*9
+
+__unknown_file (
+
+%0dataAccess.DataAccess2open()‡
+„
+
+Ý Ý(
+%2dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerº·
+
+Ý Ý(4
+%3boolean"9dataAccess.DataAccess#bidaiaEginda(ILjava/lang/String;I)Z*9
+
+__unknown_file (
+
+%2dataAccess.DataAccess*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+pGmailjava.lang.String*"
+
+__unknown_file (
+""2"bidaiaEginda(ILjava/lang/String;I)‡
+„
+
+Þ Þ(
+%4dataAccess.DataAccess"__id*S
+
+__unknown_file (7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager~|
+
+Þ Þ(
+
+%5void"dataAccess.DataAccess#close()V*9
+
+__unknown_file (
+
+%4dataAccess.DataAccess2close()"
+
+ß ß(
+"": 
+
+__unknown_file (
+"":(
+
+Ú/ Ú(=
+pGmailjava.lang.String: 
+
+__unknown_file (
+""B(&
+$businessLogic.BLFacadeImplementationHX
