@@ -91,9 +91,10 @@ public class Driver extends User implements Serializable {
 	 */
 	public boolean doesRideExists(String from, String to, Date date)  {	
 		for (Ride r:rides)
-			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date)) )
-			 return true;
-		
+			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date))) {
+				return true;
+			}
+			 	
 		return false;
 	}
 
