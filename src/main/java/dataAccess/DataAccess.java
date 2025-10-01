@@ -690,7 +690,6 @@ public void open(){
 		this.ezabatuErreklamazioa(eID);
 	}
 	
-	// Comentario
 	public boolean deleteUser(String uGmail) {
 		boolean res = false;
 		db.getTransaction().begin();
