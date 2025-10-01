@@ -41,7 +41,7 @@ public class WithdrawMoneyGUI extends JFrame{
 		
 		
 		
-		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.Withdraw"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.Withdraw"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,7 +51,7 @@ public class WithdrawMoneyGUI extends JFrame{
 		
 		BLFacade facade = HomeGUI.getBusinessLogic();
 		
-		JLabel lblNewLabelCantidad = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.Cuantity")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelCantidad = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.Cuantity")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelCantidad.setBounds(18, 75, 230, 17);
 		contentPane.add(lblNewLabelCantidad);
 		
@@ -60,16 +60,16 @@ public class WithdrawMoneyGUI extends JFrame{
 		contentPane.add(textFieldCantidad);
 		textFieldCantidad.setColumns(10);
 		
-		btnNewButtonSartu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.Retire")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonSartu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.Retire")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				
 				Integer am = Integer.parseInt(textFieldCantidad.getText());
 				if(facade.withdrawMoney(driver.getEmail(),am)) {
-					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.CR"));
+					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.CR"));
 				}else {
-					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.ERROR"));
+					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.ERROR"));
 				}
 			}
 		});
@@ -83,7 +83,7 @@ public class WithdrawMoneyGUI extends JFrame{
 		textAreaSaldoActual.setBounds(278, 17, 86, 22);
 		contentPane.add(textAreaSaldoActual);
 		
-		lblNewLabelActualMoney = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("WithdrawMoneyGUI.Actual")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabelActualMoney = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("WithdrawMoneyGUI.Actual")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelActualMoney.setBounds(18, 21, 230, 17);
 		contentPane.add(lblNewLabelActualMoney);
 		

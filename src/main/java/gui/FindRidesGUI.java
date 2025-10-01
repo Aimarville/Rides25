@@ -26,12 +26,12 @@ public class FindRidesGUI extends JFrame {
 	private JComboBox<String> jComboBoxDestination = new JComboBox<String>();
 	DefaultComboBoxModel<String> destinationCities = new DefaultComboBoxModel<String>();
 
-	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.LeavingFrom"));
-	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.GoingTo"));
-	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.RideDate"));
-	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.Rides")); 
+	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.LeavingFrom"));
+	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.GoingTo"));
+	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.RideDate"));
+	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.Rides")); 
 
-	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("Close"));
+	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("Close"));
 
 	// Code for JCalendar
 	private JCalendar jCalendar1 = new JCalendar();
@@ -47,9 +47,9 @@ public class FindRidesGUI extends JFrame {
 
 
 	private String[] columnNamesRides = new String[] {
-			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Driver"), 
-			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.NPlaces"), 
-			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Price")
+			ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.Driver"), 
+			ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.NPlaces"), 
+			ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.Price")
 	};
 
 
@@ -60,7 +60,7 @@ public class FindRidesGUI extends JFrame {
 		
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(700, 500));
-		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.FindRides"));
+		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.FindRides"));
 
 		jLabelEventDate.setBounds(new Rectangle(457, 6, 140, 25));
 		jLabelEvents.setBounds(172, 229, 259, 16);
@@ -179,8 +179,8 @@ public class FindRidesGUI extends JFrame {
 						BLFacade facade = HomeGUI.getBusinessLogic();
 						List<domain.Ride> rides=facade.getRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),UtilDate.trim(jCalendar1.getDate()));
 
-						if (rides.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.NoRides")+ ": "+dateformat1.format(calendarAct.getTime()));
-						else jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Rides")+ ": "+dateformat1.format(calendarAct.getTime()));
+						if (rides.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.NoRides")+ ": "+dateformat1.format(calendarAct.getTime()));
+						else jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.Rides")+ ": "+dateformat1.format(calendarAct.getTime()));
 						for (domain.Ride ride:rides){
 							Vector<Object> row = new Vector<Object>();
 							row.add(ride.getDriver().getEmail());
