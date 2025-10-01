@@ -1,9 +1,7 @@
 package domain;
 
 	import java.io.Serializable;
-	import java.util.Date;
-	import java.util.List;
-	import java.util.Vector;
+import java.util.*;
 
 	import javax.persistence.*;
 	import javax.xml.bind.annotation.XmlAccessType;
@@ -24,11 +22,11 @@ package domain;
 
 		@XmlIDREF
 		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST, orphanRemoval=true)
-		private List<RideBooked> bookedrides=new Vector<RideBooked>();
+		private List<RideBooked> bookedrides=new ArrayList<RideBooked>();
 		
 		@XmlIDREF
 		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST, orphanRemoval=true)
-		private List<Alerta> alerts=new Vector<Alerta>();
+		private List<Alerta> alerts=new ArrayList<Alerta>();
 
 		public Passenger() {
 			super();
