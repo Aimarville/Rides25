@@ -16,7 +16,7 @@ import businessLogic.BLFacadeImplementation;
 
 public class ApplicationLauncher { 
 	
-	public static final String etiquetas = "Etiquetas";
+	public static final String ET = "Etiquetas";
 	
 	public static void main(String[] args) {
 

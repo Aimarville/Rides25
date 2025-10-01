@@ -50,13 +50,13 @@ public class AdminMainGUI extends JFrame {
 		
 		// this.setSize(271, 295);
 		this.setSize(495, 290);
-		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
+		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.SelectOption"));
 		jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 		jLabelSelectOption.setForeground(Color.BLACK);
 		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		jButtonErreklamazio = new JButton();
-		jButtonErreklamazio.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.Erreklam"));
+		jButtonErreklamazio.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.Erreklam"));
 		jButtonErreklamazio.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new ErabakiErreklamazioaGUI();
@@ -81,8 +81,8 @@ public class AdminMainGUI extends JFrame {
 	}
 	
 	private void paintAgain() {
-		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
-		jButtonErreklamazio.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.CreateRide"));
+		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.SelectOption"));
+		jButtonErreklamazio.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.CreateRide"));
 	}
 	
 } // @jve:decl-index=0:visual-constraint="0,0"

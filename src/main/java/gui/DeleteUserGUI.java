@@ -37,7 +37,7 @@ public class DeleteUserGUI extends JFrame{
 		user=u;
 		
 		
-		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Delete"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteUserGUI.Delete"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,11 +51,11 @@ public class DeleteUserGUI extends JFrame{
 		textAreaResultado.setBounds(78, 190, 266, 60);
 		contentPane.add(textAreaResultado);
 		
-		btnNewButtonDelete = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Delete2")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonDelete = new JButton(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteUserGUI.Delete2")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!facade.deleteUser(u.getEmail())) {
-					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Error"));
+					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteUserGUI.Error"));
 				}else {
 					System.exit(0);
 				}				
@@ -64,7 +64,7 @@ public class DeleteUserGUI extends JFrame{
 		btnNewButtonDelete.setBounds(135, 123, 145, 35);
 		contentPane.add(btnNewButtonDelete);
 		
-		lblNewLabelZihurtatzea = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Zihurtatzea")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabelZihurtatzea = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteUserGUI.Zihurtatzea")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelZihurtatzea.setBounds(36, 30, 349, 60);
 		contentPane.add(lblNewLabelZihurtatzea);
 		

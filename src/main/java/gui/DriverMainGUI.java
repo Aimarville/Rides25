@@ -63,13 +63,13 @@ public class DriverMainGUI extends JFrame {
 		
 		// this.setSize(271, 295);
 		this.setSize(495, 290);
-		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
+		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.SelectOption"));
 		jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 		jLabelSelectOption.setForeground(Color.BLACK);
 		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		jButtonCreateQuery = new JButton();
-		jButtonCreateQuery.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.CreateRide"));
+		jButtonCreateQuery.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.CreateRide"));
 		jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new CreateRideGUI(driver);
@@ -78,7 +78,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonQueryQueries = new JButton();
-		jButtonQueryQueries.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.QueryRides"));
+		jButtonQueryQueries.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.QueryRides"));
 		jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new FindRidesGUI();
@@ -88,7 +88,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonWithdrawMoney = new JButton();
-		jButtonWithdrawMoney.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.Withdraw"));
+		jButtonWithdrawMoney.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.Withdraw"));
 		jButtonWithdrawMoney.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new WithdrawMoneyGUI(driver);
@@ -97,7 +97,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonAccepDecline = new JButton();
-		jButtonAccepDecline.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.AcceptDecline"));
+		jButtonAccepDecline.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.AcceptDecline"));
 		jButtonAccepDecline.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new AcceptDeclineGUI(driver);
@@ -106,7 +106,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonMovements = new JButton();
-		jButtonMovements.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.Movements"));
+		jButtonMovements.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.Movements"));
 		jButtonMovements.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				Driver d = new Driver(driver.getEmail(),driver.getPassword());
@@ -115,7 +115,7 @@ public class DriverMainGUI extends JFrame {
 			}
 		});
 		jButtonDeleteRide = new JButton();
-		jButtonDeleteRide.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteRideGUI.Title"));
+		jButtonDeleteRide.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteRideGUI.Title"));
 		jButtonDeleteRide.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new DeleteRideGUI(driver);
@@ -124,7 +124,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonAddCar = new JButton();
-		jButtonAddCar.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("AddCarGUI.Title"));
+		jButtonAddCar.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("AddCarGUI.Title"));
 		jButtonAddCar.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new AddCarGUI(driver);
@@ -132,7 +132,7 @@ public class DriverMainGUI extends JFrame {
 			}
 		});
 		jButtonDeleteUser = new JButton();
-		jButtonDeleteUser.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Delete"));
+		jButtonDeleteUser.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DeleteUserGUI.Delete"));
 		jButtonDeleteUser.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new DeleteUserGUI(driver);
@@ -141,7 +141,7 @@ public class DriverMainGUI extends JFrame {
 		});
 		
 		jButtonLookErr = new JButton();
-		jButtonLookErr.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("IkusiErreklamazioGUI.Ikusi"));
+		jButtonLookErr.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("IkusiErreklamazioGUI.Ikusi"));
 		jButtonLookErr.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new IkusiErreklamazioaGUI(driver);
@@ -168,7 +168,7 @@ public class DriverMainGUI extends JFrame {
 		jContentPane.add(jOptionPane, BorderLayout.CENTER);
 		
 		setContentPane(jContentPane);
-		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DriverMainGUI.Title") + " - driver :"+driver.getPassword());
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("DriverMainGUI.Title") + " - driver :"+driver.getPassword());
 		
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -179,10 +179,10 @@ public class DriverMainGUI extends JFrame {
 	}
 	
 	private void paintAgain() {
-		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
-		jButtonQueryQueries.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.QueryRides"));
-		jButtonCreateQuery.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.CreateRide"));
-		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.MainTitle")+ " - driver :"+driver.getPassword());
+		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.SelectOption"));
+		jButtonQueryQueries.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.QueryRides"));
+		jButtonCreateQuery.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.CreateRide"));
+		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.MainTitle")+ " - driver :"+driver.getPassword());
 	}
 	
 } // @jve:decl-index=0:visual-constraint="0,0"
