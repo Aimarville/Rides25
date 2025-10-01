@@ -1,9 +1,7 @@
 package domain;
 
 import java.io.*;
-import java.util.Date;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -31,7 +29,7 @@ public class Ride implements Serializable {
 	private Car car;
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private List<RideBooked> bookings=new Vector<RideBooked>();
+	private List<RideBooked> bookings=new ArrayList<RideBooked>();
 	
 	private Driver driver;  
 	

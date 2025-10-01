@@ -1,7 +1,6 @@
 package domain;
 
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -33,7 +32,7 @@ public abstract class User {
 		
 		@XmlIDREF
 		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-		private List<Mugimenduak> mugimenduak = new Vector<Mugimenduak>();
+		private List<Mugimenduak> mugimenduak = new ArrayList<Mugimenduak>();
 		
 		public User() {
 			super();
