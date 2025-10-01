@@ -73,7 +73,7 @@ public class AcceptDeclineGUI extends JFrame{
 		comboBoxRequests.setModel(bookedRides);
 		BLFacade facade = HomeGUI.getBusinessLogic();
 		int i = 0;
-		ArrayList<RideBooked> s = facade.getBookingsDriver(driver.getEmail(), driver.getPassword());
+		List<RideBooked> s = facade.getBookingsDriver(driver.getEmail(), driver.getPassword());
 		while(i<s.size()) {
 			if(s.get(i).getRide()!=null) {
 			bookedRides.addElement(s.get(i));

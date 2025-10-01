@@ -90,7 +90,7 @@ public interface BLFacade  {
 	
 	@WebMethod public boolean withdrawMoney(String email, int amount);
 	
-	@WebMethod public ArrayList<RideBooked> getBookingsDriver(String email,String password);
+	@WebMethod public List<RideBooked> getBookingsDriver(String email,String password);
 	
 	@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, int rideID);
 	//@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, String from, String to,  Date date, int nPlaces, float price);
