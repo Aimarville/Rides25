@@ -1,6 +1,7 @@
 package domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Vector;
@@ -25,7 +26,7 @@ public class Driver extends User implements Serializable {
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST, orphanRemoval = true)
-	private List<Ride> rides = new Vector<Ride>();
+	private List<Ride> rides = new ArrayList<Ride>();
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
