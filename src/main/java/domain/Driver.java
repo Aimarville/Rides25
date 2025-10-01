@@ -105,6 +105,7 @@ public class Driver extends User implements Serializable {
 			r=rides.get(index);
 			if ( (java.util.Objects.equals(r.getFrom(),from)) && (java.util.Objects.equals(r.getTo(),to)) && (java.util.Objects.equals(r.getDate(),date)) )
 				found=true;
+			//prueba
 		}
 			
 		if (found) {
