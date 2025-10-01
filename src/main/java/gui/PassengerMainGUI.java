@@ -63,13 +63,13 @@ public class PassengerMainGUI extends JFrame {
 		
 		// this.setSize(271, 295);
 		this.setSize(495, 290);
-		jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.SelectOption"));
+		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
 		jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 		jLabelSelectOption.setForeground(Color.BLACK);
 		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		jButtonBookRide = new JButton();
-		jButtonBookRide.setText(ResourceBundle.getBundle("Etiquetas").getString("PassengerMainGUI.QueryRides"));
+		jButtonBookRide.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("PassengerMainGUI.QueryRides"));
 		jButtonBookRide.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new FindAndBookGUI(passenger);
@@ -78,7 +78,7 @@ public class PassengerMainGUI extends JFrame {
 		});
 		
 		jButtonAddMoney = new JButton();
-		jButtonAddMoney.setText(ResourceBundle.getBundle("Etiquetas").getString("PassengerMainGUI.Saldo"));
+		jButtonAddMoney.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("PassengerMainGUI.Saldo"));
 		jButtonAddMoney.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new DepositMoneyGUI(passenger);
@@ -88,7 +88,7 @@ public class PassengerMainGUI extends JFrame {
 		});
 		
 		jButtonMovements = new JButton();
-		jButtonMovements.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.Movements"));
+		jButtonMovements.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.Movements"));
 		jButtonMovements.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				Passenger p = new Passenger(passenger.getEmail(),passenger.getPassword());
@@ -98,7 +98,7 @@ public class PassengerMainGUI extends JFrame {
 		});
 		
 		jButtonLookBookings = new JButton();
-		jButtonLookBookings.setText(ResourceBundle.getBundle("Etiquetas").getString("PassengerMainGUI.LookBookings"));
+		jButtonLookBookings.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("PassengerMainGUI.LookBookings"));
 		jButtonLookBookings.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new LookBookingsGUI(passenger);
@@ -106,7 +106,7 @@ public class PassengerMainGUI extends JFrame {
 			}
 		});
 		jButtonCreateAlert = new JButton();
-		jButtonCreateAlert.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.CreateAlert"));
+		jButtonCreateAlert.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.CreateAlert"));
 		jButtonCreateAlert.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new CreateAlertGUI(passenger);
@@ -114,7 +114,7 @@ public class PassengerMainGUI extends JFrame {
 			}
 		});
 		jButtonLookAlert = new JButton();
-		jButtonLookAlert.setText(ResourceBundle.getBundle("Etiquetas").getString("LookAlertsGUI.LookAlerts"));
+		jButtonLookAlert.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookAlertsGUI.LookAlerts"));
 		jButtonLookAlert.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new LookAlertsGUI(passenger);
@@ -123,7 +123,7 @@ public class PassengerMainGUI extends JFrame {
 		});
 		
 		jButtonDeleteUser = new JButton();
-		jButtonDeleteUser.setText(ResourceBundle.getBundle("Etiquetas").getString("DeleteUserGUI.Delete"));
+		jButtonDeleteUser.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DeleteUserGUI.Delete"));
 		jButtonDeleteUser.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new DeleteUserGUI(passenger);
@@ -149,7 +149,7 @@ public class PassengerMainGUI extends JFrame {
 		
 		
 		setContentPane(jContentPane);
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("PassengerMainGUI.PassMainTitle"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("PassengerMainGUI.PassMainTitle"));
 		
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -160,10 +160,10 @@ public class PassengerMainGUI extends JFrame {
 	}
 	
 	private void paintAgain() {
-		jLabelSelectOption.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.SelectOption"));
-		jButtonAddMoney.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Register"));
-		jButtonBookRide.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Login"));
-		jButtonMovements.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.NotRegistered"));
+		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
+		jButtonAddMoney.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Register"));
+		jButtonBookRide.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Login"));
+		jButtonMovements.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.NotRegistered"));
 	}
 	
 }

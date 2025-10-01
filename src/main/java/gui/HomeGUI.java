@@ -55,7 +55,7 @@ public class HomeGUI extends JFrame {
 		
 		// this.setSize(271, 295);
 		this.setSize(495, 290);
-		jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.SelectOption"));
+		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
 		jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 		jLabelSelectOption.setForeground(Color.BLACK);
 		jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
@@ -94,7 +94,7 @@ public class HomeGUI extends JFrame {
 		panel.add(rdbtnNewRadioButton);
 		
 		jButtonLogin = new JButton();
-		jButtonLogin.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Login"));
+		jButtonLogin.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Login"));
 		jButtonLogin.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new LoginGUI();
@@ -103,7 +103,7 @@ public class HomeGUI extends JFrame {
 		});
 		
 		jButtonRegister = new JButton();
-		jButtonRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Register"));
+		jButtonRegister.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Register"));
 		jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new RegisterGUI();
@@ -112,7 +112,7 @@ public class HomeGUI extends JFrame {
 		});
 		
 		jButtonNotRegister = new JButton();
-		jButtonNotRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.NotRegistered"));
+		jButtonNotRegister.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.NotRegistered"));
 		jButtonNotRegister.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new FindRidesGUI();
@@ -121,7 +121,7 @@ public class HomeGUI extends JFrame {
 		});
 		
 		jButtonAdmin = new JButton();
-		jButtonAdmin.setText(ResourceBundle.getBundle("Etiquetas").getString("AdminGUI.Admin"));
+		jButtonAdmin.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("AdminGUI.Admin"));
 		jButtonAdmin.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				JFrame a = new AdminMainGUI();
@@ -140,7 +140,7 @@ public class HomeGUI extends JFrame {
 		
 		
 		setContentPane(jContentPane);
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.MainTitle"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.MainTitle"));
 		
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -151,10 +151,10 @@ public class HomeGUI extends JFrame {
 	}
 	
 	private void paintAgain() {
-		jLabelSelectOption.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.SelectOption"));
-		jButtonRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Register"));
-		jButtonLogin.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.Login"));
-		jButtonNotRegister.setText(ResourceBundle.getBundle("Etiquetas").getString("HomeGUI.NotRegistered"));
+		jLabelSelectOption.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("MainGUI.SelectOption"));
+		jButtonRegister.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Register"));
+		jButtonLogin.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.Login"));
+		jButtonNotRegister.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("HomeGUI.NotRegistered"));
 	}
 	
 }

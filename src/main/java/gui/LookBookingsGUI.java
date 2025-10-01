@@ -48,7 +48,7 @@ public class LookBookingsGUI extends JFrame{
 		passenger=p;
 		
 
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("LookBookingsGUI.Title"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookBookingsGUI.Title"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -79,7 +79,7 @@ public class LookBookingsGUI extends JFrame{
 			}
 			i++;
 		}	
-		JButton btnNewButtonBukatuta = new JButton(ResourceBundle.getBundle("Etiquetas").getString("LookBookingsGUI.Bukatuta")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewButtonBukatuta = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookBookingsGUI.Bukatuta")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonBukatuta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -87,9 +87,9 @@ public class LookBookingsGUI extends JFrame{
 				RideBooked r = (RideBooked) comboBoxRequests.getSelectedItem();
 				Integer ra = (Integer) comboBoxRating.getSelectedItem();
 				if(facade.bidaiaEginda(r.getBookNumber(), passenger.getEmail(),ra)) {
-					textFieldResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("LookBookingsGUI.Res"));
+					textFieldResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookBookingsGUI.Res"));
 				}else {
-					textFieldResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("LookBookingsGUI.ERROR"));
+					textFieldResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookBookingsGUI.ERROR"));
 				}
 			}
 		});
@@ -102,7 +102,7 @@ public class LookBookingsGUI extends JFrame{
 		textFieldResultado.setColumns(10);
 		textFieldResultado.setEditable(false);
 		
-		JLabel lblNewLabelRating = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LookBookingsGUI.Rating")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelRating = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LookBookingsGUI.Rating")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelRating.setBounds(102, 130, 80, 14);
 		contentPane.add(lblNewLabelRating);
 		
@@ -111,7 +111,7 @@ public class LookBookingsGUI extends JFrame{
 		contentPane.add(comboBoxRating);
 		comboBoxRating.setModel(Ratings);
 		
-		btnNewButtonErreklamazioa = new JButton(ResourceBundle.getBundle("Etiquetas").getString("ErreklamazioGUI.Erreklamazio")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonErreklamazioa = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErreklamazioGUI.Erreklamazio")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonErreklamazioa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

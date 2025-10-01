@@ -31,12 +31,12 @@ public class FindAndBookGUI extends JFrame {
 	private JComboBox<String> jComboBoxDestination = new JComboBox<String>();
 	DefaultComboBoxModel<String> destinationCities = new DefaultComboBoxModel<String>();
 
-	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.LeavingFrom"));
-	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.GoingTo"));
-	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideDate"));
-	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.Rides")); 
+	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.LeavingFrom"));
+	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.GoingTo"));
+	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.RideDate"));
+	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.Rides")); 
 
-	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("Close"));
 
 	// Code for JCalendar
 	private JCalendar jCalendar1 = new JCalendar();
@@ -52,11 +52,11 @@ public class FindAndBookGUI extends JFrame {
 
 
 	private String[] columnNamesRides = new String[] {
-			ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.Driver"), 
-			ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.NPlaces"), 
-			ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.Price")
+			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Driver"), 
+			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.NPlaces"), 
+			ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Price")
 	};
-	private final JButton jButtonBook = new JButton(ResourceBundle.getBundle("Etiquetas").getString("FindAndBookGUI.Book")); //$NON-NLS-1$ //$NON-NLS-2$
+	private final JButton jButtonBook = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindAndBookGUI.Book")); //$NON-NLS-1$ //$NON-NLS-2$
 	private JTextField textFieldSeats;
 
 
@@ -65,7 +65,7 @@ public class FindAndBookGUI extends JFrame {
 		this.passenger = passenger;
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(700, 500));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.FindRides"));
+		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.FindRides"));
 
 		jLabelEventDate.setBounds(new Rectangle(457, 6, 140, 25));
 		jLabelEvents.setBounds(172, 229, 259, 16);
@@ -184,8 +184,8 @@ public class FindAndBookGUI extends JFrame {
 						BLFacade facade = HomeGUI.getBusinessLogic();
 						List<domain.Ride> rides=facade.getRides((String)jComboBoxOrigin.getSelectedItem(),(String)jComboBoxDestination.getSelectedItem(),UtilDate.trim(jCalendar1.getDate()));
 
-						if (rides.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.NoRides")+ ": "+dateformat1.format(calendarAct.getTime()));
-						else jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("FindRidesGUI.Rides")+ ": "+dateformat1.format(calendarAct.getTime()));
+						if (rides.isEmpty() ) jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.NoRides")+ ": "+dateformat1.format(calendarAct.getTime()));
+						else jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindRidesGUI.Rides")+ ": "+dateformat1.format(calendarAct.getTime()));
 						for (domain.Ride ride:rides){
 							Vector<Object> row = new Vector<Object>();
 							row.add(ride.getDriver().getEmail());
@@ -243,7 +243,7 @@ public class FindAndBookGUI extends JFrame {
 					int seats = (int) tableModelRides.getValueAt(row, 1);
 					Float price = (Float) tableModelRides.getValueAt(row, 2);
 				}catch (ArrayIndexOutOfBoundsException exc) {
-					jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("FindAndBookGUI.UnselectedError"));
+					jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindAndBookGUI.UnselectedError"));
 				}
 				BLFacade facade = HomeGUI.getBusinessLogic();
 				
@@ -257,9 +257,9 @@ public class FindAndBookGUI extends JFrame {
 				
 				//if(facade.bookRide(passenger, email, bookedseats, origin, dest, UtilDate.trim(jCalendar1.getDate()), seats, price)) {
 				if(facade.bookRide(passenger, email, bookedseats, ride.getRideNumber())) {
-					jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("FindAndBookGUI.Co"));
+					jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindAndBookGUI.Co"));
 				}else {
-					jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("FindAndBookGUI.ERROR"));
+					jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindAndBookGUI.ERROR"));
 				}
 				
 			}
@@ -268,7 +268,7 @@ public class FindAndBookGUI extends JFrame {
 		
 		getContentPane().add(jButtonBook);
 		
-		JLabel lblNewLabelSeatsBook = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("FindAndBookGUI.BookedSeats")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelSeatsBook = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("FindAndBookGUI.BookedSeats")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelSeatsBook.setBounds(10, 145, 169, 16);
 		getContentPane().add(lblNewLabelSeatsBook);
 		

@@ -23,6 +23,8 @@ public class AddCarGUI extends JFrame{
 	
 	private Driver driver;
 	
+	private final String etiquetas = "Etiquetas";
+	
 	
 	private JPanel contentPane;
 	private JTextField textFieldBrand;
@@ -43,7 +45,7 @@ public class AddCarGUI extends JFrame{
 		
 		
 		
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Title"));
+		setTitle(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Title"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,7 +55,7 @@ public class AddCarGUI extends JFrame{
 		
 		
 		
-		JLabel lblNewLabelBrand = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Brand")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelBrand = new JLabel(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Brand")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelBrand.setBounds(10, 49, 225, 17);
 		contentPane.add(lblNewLabelBrand);
 		
@@ -62,7 +64,7 @@ public class AddCarGUI extends JFrame{
 		contentPane.add(textFieldBrand);
 		textFieldBrand.setColumns(10);
 		
-		btnNewButtonSartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.Insert")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonSartu = new JButton(ResourceBundle.getBundle(etiquetas).getString("DepositMoneyGUI.Insert")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -73,16 +75,16 @@ public class AddCarGUI extends JFrame{
 				int seats = Integer.parseInt(textFieldSeats.getText());
 				
 				if(facade.addCar(license, brand, color,seats, d.getEmail())) {
-					textAreaResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Correct"));
+					textAreaResultado.setText(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Correct"));
 				}else {
-					textAreaResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Error"));
+					textAreaResultado.setText(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Error"));
 			}
 		}
 		});
 		btnNewButtonSartu.setBounds(136, 169, 145, 35);
 		contentPane.add(btnNewButtonSartu);
 		
-		lblNewLabelLicensePlate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.LicensePlate")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabelLicensePlate = new JLabel(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.LicensePlate")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelLicensePlate.setBounds(10, 21, 225, 17);
 		contentPane.add(lblNewLabelLicensePlate);
 		
@@ -95,7 +97,7 @@ public class AddCarGUI extends JFrame{
 		contentPane.add(textFieldLicensePlate);
 		textFieldLicensePlate.setColumns(10);
 		
-		JLabel lblNewLabelSeats = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Seats")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelSeats = new JLabel(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Seats")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelSeats.setBounds(10, 81, 225, 14);
 		contentPane.add(lblNewLabelSeats);
 		
@@ -104,7 +106,7 @@ public class AddCarGUI extends JFrame{
 		contentPane.add(textFieldSeats);
 		textFieldSeats.setColumns(10);
 		
-		JLabel lblNewLabelcolor = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("AddCarGUI.Color")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelcolor = new JLabel(ResourceBundle.getBundle(etiquetas).getString("AddCarGUI.Color")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelcolor.setBounds(10, 112, 225, 14);
 		contentPane.add(lblNewLabelcolor);
 		

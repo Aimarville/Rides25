@@ -45,7 +45,7 @@ public class ErreklamazioaGUI extends JFrame{
 		passenger=p;
 		
 
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("ErreklamazioGUI.Erreklamazio"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErreklamazioGUI.Erreklamazio"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -71,7 +71,7 @@ public class ErreklamazioaGUI extends JFrame{
 			}
 			i++;
 		}	
-		JButton btnNewButtonBukatuta = new JButton(ResourceBundle.getBundle("Etiquetas").getString("ErreklamazioaGUI.Egin")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewButtonBukatuta = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErreklamazioaGUI.Egin")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonBukatuta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -80,7 +80,7 @@ public class ErreklamazioaGUI extends JFrame{
 			
 			facade.erreklamazioa(zerg, p.getEmail(), rb.getBookNumber());			
 				
-			textAreaReslutado.setText(ResourceBundle.getBundle("Etiquetas").getString("ErreklamazioaGUI.Eginda"));
+			textAreaReslutado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErreklamazioaGUI.Eginda"));
 			}
 		});
 		btnNewButtonBukatuta.setBounds(153, 200, 98, 31);

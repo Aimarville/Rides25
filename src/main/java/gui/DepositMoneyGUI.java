@@ -41,7 +41,7 @@ public class DepositMoneyGUI extends JFrame{
 		
 		
 		
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.Wallet"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.Wallet"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,7 +51,7 @@ public class DepositMoneyGUI extends JFrame{
 		
 		BLFacade facade = HomeGUI.getBusinessLogic();
 		
-		JLabel lblNewLabelCantidad = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.Cuantity")); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel lblNewLabelCantidad = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.Cuantity")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelCantidad.setBounds(10, 75, 225, 17);
 		contentPane.add(lblNewLabelCantidad);
 		
@@ -60,15 +60,15 @@ public class DepositMoneyGUI extends JFrame{
 		contentPane.add(textFieldCantidad);
 		textFieldCantidad.setColumns(10);
 		
-		btnNewButtonSartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.Insert")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonSartu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.Insert")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				Integer am = Integer.parseInt(textFieldCantidad.getText());
 				if(facade.addMoney(passenger.getEmail(),am)) {
-					textAreaResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.CI"));
+					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.CI"));
 				}else {
-					textAreaResultado.setText(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.ERROR"));
+					textAreaResultado.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.ERROR"));
 				}
 			}
 		});
@@ -82,7 +82,7 @@ public class DepositMoneyGUI extends JFrame{
 		textAreaSaldoActual.setBounds(247, 17, 84, 22);
 		contentPane.add(textAreaSaldoActual);
 		
-		lblNewLabelActualMoney = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("DepositMoneyGUI.Actual")); //$NON-NLS-1$ //$NON-NLS-2$
+		lblNewLabelActualMoney = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("DepositMoneyGUI.Actual")); //$NON-NLS-1$ //$NON-NLS-2$
 		lblNewLabelActualMoney.setBounds(10, 21, 225, 17);
 		contentPane.add(lblNewLabelActualMoney);
 		

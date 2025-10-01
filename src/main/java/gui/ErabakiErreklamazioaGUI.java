@@ -41,7 +41,7 @@ public class ErabakiErreklamazioaGUI extends JFrame{
 		
 		BLFacade facade = HomeGUI.getBusinessLogic();
 
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("IkusiErreklamazioGUI.Ikusi"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("IkusiErreklamazioGUI.Ikusi"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -66,7 +66,7 @@ public class ErabakiErreklamazioaGUI extends JFrame{
 		contentPane.add(comboBoxRequests);
 		comboBoxRequests.setModel(bookedRides);
 		
-		JButton btnNewButtonBaieztatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("ErabakiErreklamazioaGUI.Baiezt")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewButtonBaieztatu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErabakiErreklamazioaGUI.Baiezt")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonBaieztatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -79,7 +79,7 @@ public class ErabakiErreklamazioaGUI extends JFrame{
 		btnNewButtonBaieztatu.setBounds(65, 206, 102, 33);
 		contentPane.add(btnNewButtonBaieztatu);
 		
-		JButton btnNewButtonEzeztatu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("ErabakiErreklamazioaGUI.Ezezt")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewButtonEzeztatu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("ErabakiErreklamazioaGUI.Ezezt")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonEzeztatu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

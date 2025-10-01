@@ -47,7 +47,7 @@ public class LoginGUI extends JFrame {
 		
 		
 		
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Login"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Login"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,39 +59,39 @@ public class LoginGUI extends JFrame {
 		contentPane.add(txtLogin);
 		txtLogin.setColumns(10);
 		
-		JLabel lblErabiltzaileIzenaSartu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Email"));
+		JLabel lblErabiltzaileIzenaSartu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Email"));
 		lblErabiltzaileIzenaSartu.setBounds(50, 29, 165, 16);
 		contentPane.add(lblErabiltzaileIzenaSartu);
 		
-		JLabel lblPasahitzaSartu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Pass"));
+		JLabel lblPasahitzaSartu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Pass"));
 		lblPasahitzaSartu.setBounds(50, 72, 145, 16);
 		contentPane.add(lblPasahitzaSartu);
 		
-		JLabel lblErabiltzaileMotaAukeratu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.DRorTR"));
+		JLabel lblErabiltzaileMotaAukeratu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.DRorTR"));
 		lblErabiltzaileMotaAukeratu.setBounds(30, 118, 165, 16);
 		contentPane.add(lblErabiltzaileMotaAukeratu);
 		
-		btnSistemanSartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Enter"));
+		btnSistemanSartu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Enter"));
 		btnSistemanSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				BLFacade facade = HomeGUI.getBusinessLogic();
 				if(rdbtnDriver.isSelected()) {
 					if(facade.login(txtLogin.getText(), pwdPassword.getText(), "Driver")) {
-						textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Loged"));
+						textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Loged"));
 						Driver d = new Driver(txtLogin.getText(), pwdPassword.getText());
 						JFrame a = new DriverMainGUI(d);
 						a.setVisible(true);
 					}else {
-						textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.NotLoged"));
+						textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.NotLoged"));
 					}
 				}else if(rdbtnTraveler.isSelected()) {
 					if(facade.login(txtLogin.getText(), pwdPassword.getText(), "Passenger")) {
-						textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Loged"));
+						textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Loged"));
 						Passenger p = new Passenger(txtLogin.getText(), pwdPassword.getText());
 						JFrame a = new PassengerMainGUI(p);
 						a.setVisible(true);
 					}else {
-						textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.NotLoged"));
+						textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.NotLoged"));
 					}
 					
 				}
@@ -112,12 +112,12 @@ public class LoginGUI extends JFrame {
 		pwdPassword.setBounds(233, 66, 134, 28);
 		contentPane.add(pwdPassword);
 		
-		rdbtnDriver = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Driver"));
+		rdbtnDriver = new JRadioButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Driver"));
 		buttonGroup.add(rdbtnDriver);
 		rdbtnDriver.setBounds(207, 114, 88, 23);
 		contentPane.add(rdbtnDriver);
 		
-		rdbtnTraveler = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("LoginGUI.Traveler"));
+		rdbtnTraveler = new JRadioButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("LoginGUI.Traveler"));
 		buttonGroup.add(rdbtnTraveler);
 		rdbtnTraveler.setBounds(299, 114, 85, 23);
 		contentPane.add(rdbtnTraveler);

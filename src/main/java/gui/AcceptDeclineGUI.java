@@ -30,8 +30,7 @@ public class AcceptDeclineGUI extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	private Driver driver;
-	
-	
+		
 	private JPanel contentPane;
 	private JTextArea textAreaResultado;
 	private JTextArea textAreaEmaitza;

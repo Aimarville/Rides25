@@ -31,9 +31,9 @@ public class CreateAlertGUI extends JFrame {
 	private JTextField fieldOrigin=new JTextField();
 	private JTextField fieldDestination=new JTextField();
 	
-	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.LeavingFrom"));
-	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.GoingTo")); 
-	private JLabel jLabRideDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideDate"));
+	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.LeavingFrom"));
+	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.GoingTo")); 
+	private JLabel jLabRideDate = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.RideDate"));
 	private DefaultComboBoxModel<Car> bookedRides = new DefaultComboBoxModel<Car>();
 
 	private JCalendar jCalendar = new JCalendar();
@@ -55,7 +55,7 @@ public class CreateAlertGUI extends JFrame {
 		pass=passenger;
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(604, 370));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.CreateAlert"));
+		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.CreateAlert"));
 
 		jLabelOrigin.setBounds(new Rectangle(6, 56, 92, 20));
 
@@ -98,7 +98,7 @@ public class CreateAlertGUI extends JFrame {
 		
 		textFieldMessage.setEditable(false);
 		
-		JButton btnNewCreate = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateAlertGUI.Create")); //$NON-NLS-1$ //$NON-NLS-2$
+		JButton btnNewCreate = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateAlertGUI.Create")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String origin = fieldOrigin.getText();

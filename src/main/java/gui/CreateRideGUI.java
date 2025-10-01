@@ -30,11 +30,11 @@ public class CreateRideGUI extends JFrame {
 	private JTextField fieldOrigin=new JTextField();
 	private JTextField fieldDestination=new JTextField();
 	
-	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.LeavingFrom"));
-	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.GoingTo")); 
-	private JLabel jLabelSeats = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.NumberOfSeats"));
-	private JLabel jLabRideDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideDate"));
-	private JLabel jLabelPrice = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.Price"));
+	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.LeavingFrom"));
+	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.GoingTo")); 
+	private JLabel jLabelSeats = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.NumberOfSeats"));
+	private JLabel jLabRideDate = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.RideDate"));
+	private JLabel jLabelPrice = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.Price"));
 
 	private JComboBox<Car> comboBoxCar;
 	private DefaultComboBoxModel<Car> bookedRides = new DefaultComboBoxModel<Car>();
@@ -48,13 +48,13 @@ public class CreateRideGUI extends JFrame {
 
 	private JScrollPane scrollPaneEvents = new JScrollPane();
 
-	private JButton jButtonCreate = new JButton(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.CreateRide"));
-	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
+	private JButton jButtonCreate = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.CreateRide"));
+	private JButton jButtonClose = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("Close"));
 	private JLabel jLabelMsg = new JLabel();
 	private JLabel jLabelError = new JLabel();
 	
 	private List<Date> datesWithEventsCurrentMonth;
-	private final JLabel lblNewLabelCar = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.Car")); //$NON-NLS-1$ //$NON-NLS-2$
+	private final JLabel lblNewLabelCar = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.Car")); //$NON-NLS-1$ //$NON-NLS-2$
 
 
 	public CreateRideGUI(Driver driver) {
@@ -62,7 +62,7 @@ public class CreateRideGUI extends JFrame {
 		this.driver=driver;
 		this.getContentPane().setLayout(null);
 		this.setSize(new Dimension(604, 370));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.CreateRide"));
+		this.setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.CreateRide"));
 
 		jLabelOrigin.setBounds(new Rectangle(6, 56, 92, 20));
 		jLabelSeats.setBounds(new Rectangle(6, 119, 173, 20));
@@ -195,7 +195,7 @@ public class CreateRideGUI extends JFrame {
 				Car car = (Car) comboBoxCar.getSelectedItem();
 				
 				Ride r=facade.createRide(fieldOrigin.getText(), fieldDestination.getText(), UtilDate.trim(jCalendar.getDate()), inputSeats, price,car, driver.getEmail());
-				jLabelMsg.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.RideCreated"));
+				jLabelMsg.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.RideCreated"));
 
 			} catch (RideMustBeLaterThanTodayException e1) {
 				// TODO Auto-generated catch block
@@ -215,19 +215,19 @@ public class CreateRideGUI extends JFrame {
 		
 		try {
 			if ((fieldOrigin.getText().length()==0) || (fieldDestination.getText().length()==0) || (jTextFieldSeats.getText().length()==0) || (jTextFieldPrice.getText().length()==0))
-				return ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.ErrorQuery");
+				return ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.ErrorQuery");
 			else {
 
 				// trigger an exception if the introduced string is not a number
 				int inputSeats = Integer.parseInt(jTextFieldSeats.getText());
 
 				if (inputSeats <= 0) {
-					return ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.SeatsMustBeGreaterThan0");
+					return ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.SeatsMustBeGreaterThan0");
 				}
 				else {
 					float price = Float.parseFloat(jTextFieldPrice.getText());
 					if (price <= 0) 
-						return ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.PriceMustBeGreaterThan0");
+						return ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.PriceMustBeGreaterThan0");
 					
 					else 
 						return null;
@@ -236,7 +236,7 @@ public class CreateRideGUI extends JFrame {
 			}
 		} catch (java.lang.NumberFormatException e1) {
 
-			return  ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.ErrorNumber");		
+			return  ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("CreateRideGUI.ErrorNumber");		
 		} catch (Exception e1) {
 
 			e1.printStackTrace();

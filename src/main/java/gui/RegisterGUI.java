@@ -46,7 +46,7 @@ public class RegisterGUI extends JFrame {
 		
 		
 		
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Register"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Register"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,19 +59,19 @@ public class RegisterGUI extends JFrame {
 		txtLogin.setColumns(10);
 		txtLogin.setText("test@gmail.com");
 		
-		JLabel lblErabiltzaileIzenaSartu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Email"));
+		JLabel lblErabiltzaileIzenaSartu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Email"));
 		lblErabiltzaileIzenaSartu.setBounds(50, 29, 165, 16);
 		contentPane.add(lblErabiltzaileIzenaSartu);
 		
-		JLabel lblPasahitzaSartu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Pass"));
+		JLabel lblPasahitzaSartu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Pass"));
 		lblPasahitzaSartu.setBounds(50, 72, 145, 16);
 		contentPane.add(lblPasahitzaSartu);
 		
-		JLabel lblErabiltzaileMotaAukeratu = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.DRorTR"));
+		JLabel lblErabiltzaileMotaAukeratu = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.DRorTR"));
 		lblErabiltzaileMotaAukeratu.setBounds(30, 118, 165, 16);
 		contentPane.add(lblErabiltzaileMotaAukeratu);
 		
-		btnSistemanSartu = new JButton(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Register"));
+		btnSistemanSartu = new JButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Register"));
 		btnSistemanSartu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				boolean res = false;
@@ -82,9 +82,9 @@ public class RegisterGUI extends JFrame {
 					res = facade.register(txtLogin.getText(), pwdPassword.getText(), "Passenger");
 				}	
 				if(res) {
-					textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Registered"));
+					textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Registered"));
 				}else {
-					textArea.setText(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Error"));
+					textArea.setText(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Error"));
 				}
 			}
 		});
@@ -101,12 +101,12 @@ public class RegisterGUI extends JFrame {
 		contentPane.add(pwdPassword);
 		pwdPassword.setText("test12");
 		
-		rdbtnDriver = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Driver"));
+		rdbtnDriver = new JRadioButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Driver"));
 		buttonGroup.add(rdbtnDriver);
 		rdbtnDriver.setBounds(207, 114, 88, 23);
 		contentPane.add(rdbtnDriver);
 		
-		rdbtnTraveler = new JRadioButton(ResourceBundle.getBundle("Etiquetas").getString("RegisterGUI.Traveler"));
+		rdbtnTraveler = new JRadioButton(ResourceBundle.getBundle(ApplicationLauncher.etiquetas).getString("RegisterGUI.Traveler"));
 		buttonGroup.add(rdbtnTraveler);
 		rdbtnTraveler.setBounds(299, 114, 85, 23);
 		contentPane.add(rdbtnTraveler);
