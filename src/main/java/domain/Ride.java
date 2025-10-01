@@ -26,7 +26,7 @@ public class Ride implements Serializable {
 	private Date date;
 	private float price;
 	private int rating;
-	private Car car;
+	private transient Car car;
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 	private List<RideBooked> bookings=new ArrayList<RideBooked>();

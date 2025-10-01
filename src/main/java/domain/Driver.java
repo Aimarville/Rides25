@@ -27,11 +27,11 @@ public class Driver extends User implements Serializable {
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private List<Car> cars=new ArrayList<Car>();
+	private transient List<Car> cars=new ArrayList<Car>();
 	
 	@XmlIDREF
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
-	private List<Erreklamazioa> erreklamazioak=new ArrayList<Erreklamazioa>();
+	private transient List<Erreklamazioa> erreklamazioak=new ArrayList<Erreklamazioa>();
 	
 	public Driver() {
 		super();

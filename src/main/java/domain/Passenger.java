@@ -26,7 +26,7 @@ import java.util.*;
 		
 		@XmlIDREF
 		@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST, orphanRemoval=true)
-		private List<Alerta> alerts=new ArrayList<Alerta>();
+		private transient List<Alerta> alerts=new ArrayList<Alerta>();
 
 		public Passenger() {
 			super();
