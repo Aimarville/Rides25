@@ -381,14 +381,14 @@ public void open(){
 	
 	}
 	
-	public boolean accept(int BookNumber) {
+	public boolean accept(int bookNumber) {
 		
 		boolean res = false;
 		
 		db.getTransaction().begin();
 		
 		RideBooked rbm = null;
-		rbm = db.find(RideBooked.class, BookNumber);
+		rbm = db.find(RideBooked.class, bookNumber);
 		
 		Passenger pass = null;
 		pass = db.find(Passenger.class, rbm.getPassEmail());		
@@ -408,12 +408,12 @@ public void open(){
 		return res;
 	}
 	
-	public boolean decline(int BookNumber) {
+	public boolean decline(int bookNumber) {
 			
 			db.getTransaction().begin();
 			
 			RideBooked rbm = null;
-			rbm = db.find(RideBooked.class, BookNumber);
+			rbm = db.find(RideBooked.class, bookNumber);
 			
 			rbm.getRideBookings().remove(rbm);
 			rbm.getPassBookings().remove(rbm);
@@ -466,14 +466,14 @@ public void open(){
 		}
 		return ema;
 	}
-	public boolean bidaiaEginda(int BookNumber, String pGmail, int b) {
+	public boolean bidaiaEginda(int bookNumber, String pGmail, int b) {
 		
 		db.getTransaction().begin();
 		Passenger p = null;
 		p = db.find(Passenger.class, pGmail);
 		
 		RideBooked rb = null;
-		rb = db.find(RideBooked.class, BookNumber);
+		rb = db.find(RideBooked.class, bookNumber);
 		
 		Ride r = null;
 		r = db.find(Ride.class, rb.getRideNumber());
@@ -483,8 +483,8 @@ public void open(){
 		d = db.find(Driver.class, r.getEmail());
 		
 		if (r.getDate().before(new Date())) {
-			r.removeBookRide(BookNumber);
-			p.removeBookRide(BookNumber);
+			r.removeBookRide(bookNumber);
+			p.removeBookRide(bookNumber);
 			db.persist(r);
 			db.persist(p);
 			
@@ -589,12 +589,12 @@ public void open(){
 		return cars;
 	}
 	
-	public void erreklamazioa(String zerg, String pGmail, int BookNumber) {
+	public void erreklamazioa(String zerg, String pGmail, int bookNumber) {
 		
 		db.getTransaction().begin();
 		
 		RideBooked rb = null;
-		rb = db.find(RideBooked.class, BookNumber);
+		rb = db.find(RideBooked.class, bookNumber);
 		
 		Ride ri = null;
 		ri = db.find(Ride.class, rb.getRideNumber());
@@ -760,9 +760,9 @@ public void open(){
 		db.getTransaction().commit();
 	}
 	
-	public void deleteRideBooked (int BookNumber) {
+	public void deleteRideBooked (int bookNumber) {
 		db.getTransaction().begin();
-		RideBooked ridb = db.find(RideBooked.class, BookNumber);
+		RideBooked ridb = db.find(RideBooked.class, bookNumber);
 		db.remove(ridb);
 		db.getTransaction().commit();
 	}

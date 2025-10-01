@@ -95,15 +95,15 @@ public interface BLFacade  {
 	@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, int rideID);
 	//@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, String from, String to,  Date date, int nPlaces, float price);
 	
-	@WebMethod public boolean accept(int BookNumber);
+	@WebMethod public boolean accept(int bookNumber);
 	
-	@WebMethod public boolean decline(int BookNumber);
+	@WebMethod public boolean decline(int bookNumber);
 	
 	@WebMethod public List<RideBooked> getBookingsPass(String email,String password);
 	
 	@WebMethod public List<Mugimenduak> getMugimenduak(String uGmail);
 	
-	 @WebMethod public boolean bidaiaEginda(int BookNumber, String pGmail, int b);
+	 @WebMethod public boolean bidaiaEginda(int bookNumber, String pGmail, int b);
 	 
 	 @WebMethod public List<Ride> getRidesDriver(String dGmail);
 	
@@ -119,7 +119,7 @@ public interface BLFacade  {
 	 
 	 @WebMethod public Ride getRideByEmail(String email, String from, String to, Date date);
 	 
-	 @WebMethod public void erreklamazioa(String zerg, String pGmail, int BookNumber);
+	 @WebMethod public void erreklamazioa(String zerg, String pGmail, int bookNumber);
 	 
 	 @WebMethod public List<Erreklamazioa> geterreklamazio(String dGmail);
 	 

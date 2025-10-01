@@ -181,18 +181,18 @@ public class BLFacadeImplementation  implements BLFacade {
 	   return res;
    }
    
-   public boolean accept(int BookNumber) {
+   public boolean accept(int bookNumber) {
 	   Boolean res;
 	   dbManager.open();
-		res = dbManager.accept(BookNumber);
+		res = dbManager.accept(bookNumber);
 		dbManager.close();
 	   return res;
    }
    
-   public boolean decline(int BookNumber) {
+   public boolean decline(int bookNumber) {
 	   Boolean res;
 	   dbManager.open();
-		res = dbManager.decline(BookNumber);
+		res = dbManager.decline(bookNumber);
 		dbManager.close();
 	   return res;
 	   
@@ -215,10 +215,10 @@ public class BLFacadeImplementation  implements BLFacade {
 	   
    }
    @WebMethod
-   public boolean bidaiaEginda(int BookNumber, String pGmail, int b) {
+   public boolean bidaiaEginda(int bookNumber, String pGmail, int b) {
 	   boolean res = false;
 	   dbManager.open();
-		res = dbManager.bidaiaEginda(BookNumber, pGmail,b);
+		res = dbManager.bidaiaEginda(bookNumber, pGmail,b);
 		dbManager.close();
 		return res;
    }
@@ -274,9 +274,9 @@ public class BLFacadeImplementation  implements BLFacade {
    }
    
    @WebMethod
-   public void erreklamazioa(String zerg, String pGmail, int BookNumber) {
+   public void erreklamazioa(String zerg, String pGmail, int bookNumber) {
 	   dbManager.open();
-	   dbManager.erreklamazioa(zerg, pGmail, BookNumber);
+	   dbManager.erreklamazioa(zerg, pGmail, bookNumber);
 	   dbManager.close();
    }
    
