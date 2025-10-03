@@ -6,8 +6,8 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-	allow_failure: true
   build:
+	allow_failure: true
     name: Build and analyze
     runs-on: ubuntu-latest
     steps:
