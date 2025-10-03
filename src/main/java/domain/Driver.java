@@ -36,6 +36,8 @@ public class Driver extends User implements Serializable {
 	public Driver() {
 		super();
 	}
+	
+	//prueba
 
 	public Driver(String email, String password) {
 		super(email, password, "Driver");
