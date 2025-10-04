@@ -1,15 +1,21 @@
 package gui;
 
 import businessLogic.BLFacade;
+
 import configuration.UtilDate;
 
 import com.toedter.calendar.JCalendar;
-import domain.Ride;
+
 import javax.swing.*;
+
 import java.awt.*;
+
 import java.awt.event.*;
+
 import java.beans.*;
+
 import java.text.DateFormat;
+
 import java.util.*;
 import java.util.List;
 

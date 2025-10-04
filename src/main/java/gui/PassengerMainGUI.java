@@ -1,28 +1,16 @@
 package gui;
 
-
-
-
 import javax.swing.*;
 
-
 import businessLogic.BLFacade;
-import domain.Driver;
-import domain.Passenger;
-import domain.User;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import domain.*;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.*;
 
+import java.awt.event.*;
+
+import java.util.*;
 
 public class PassengerMainGUI extends JFrame {
 

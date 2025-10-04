@@ -1,6 +1,7 @@
 package gui;
 
 import java.text.DateFormat;
+
 import java.util.*;
 import java.util.List;
 
@@ -9,18 +10,18 @@ import javax.swing.*;
 import com.toedter.calendar.JCalendar;
 
 import java.awt.*;
+
 import java.awt.event.*;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
+
+import java.beans.*;
 
 import businessLogic.BLFacade;
+
 import configuration.UtilDate;
-import domain.Car;
-import domain.Driver;
-import domain.Ride;
-import domain.RideBooked;
-import exceptions.RideAlreadyExistException;
-import exceptions.RideMustBeLaterThanTodayException;
+
+import domain.*;
+
+import exceptions.*;
 
 public class CreateRideGUI extends JFrame {
 	private static final long serialVersionUID = 1L;

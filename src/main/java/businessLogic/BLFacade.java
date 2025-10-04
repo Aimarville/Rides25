@@ -1,22 +1,11 @@
 package businessLogic;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
-import domain.Ride;
-import domain.RideBooked;
-import domain.User;
-import domain.Car;
-import domain.Driver;
-import domain.Erreklamazioa;
-import domain.Mugimenduak;
-import domain.Passenger;
-import exceptions.RideMustBeLaterThanTodayException;
-import exceptions.RideAlreadyExistException;
+import domain.*;
+import exceptions.*;
 
-import javax.jws.WebMethod;
-import javax.jws.WebService;
+import javax.jws.*;
  
 /**
  * Interface that specifies the business logic.

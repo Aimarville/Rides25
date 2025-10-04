@@ -1,24 +1,13 @@
 package businessLogic;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
 
-import javax.jws.WebMethod;
-import javax.jws.WebService;
+import java.util.*;
+
+import javax.jws.*;
 
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
-import domain.Ride;
-import domain.RideBooked;
-import domain.User;
-import domain.Car;
-import domain.Driver;
-import domain.Erreklamazioa;
-import domain.Mugimenduak;
-import domain.Passenger;
-import exceptions.RideMustBeLaterThanTodayException;
-import exceptions.RideAlreadyExistException;
+import domain.*;
+import exceptions.*;
 
 /**
  * It implements the business logic as a web service.

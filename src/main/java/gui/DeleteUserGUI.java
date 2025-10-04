@@ -2,21 +2,15 @@ package gui;
 
 import java.util.ResourceBundle;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
-import domain.Driver;
-import domain.Passenger;
-import domain.User;
 
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import domain.*;
+
+import java.awt.event.*;
 
 public class DeleteUserGUI extends JFrame{
 	

@@ -1,29 +1,20 @@
 package dataAccess;
 
 import java.io.File;
+
 import java.net.NoRouteToHostException;
+
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
-import java.util.Vector;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.NoResultException;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import java.util.*;
 
-import configuration.ConfigXML;
-import configuration.UtilDate;
+import javax.persistence.*;
+
+import configuration.*;
+
 import domain.*;
-import exceptions.RideAlreadyExistException;
-import exceptions.RideMustBeLaterThanTodayException;
+
+import exceptions.*;
 
 /**
  * It implements the data access to the objectDb database

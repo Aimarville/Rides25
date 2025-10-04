@@ -1,28 +1,14 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
-import dataAccess.DataAccess;
-import domain.Driver;
 
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-import javax.swing.ButtonGroup;
-import javax.swing.JTextArea;
+import java.awt.event.*;
 
-
-import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
-import java.awt.event.ActionEvent;
-import javax.swing.JPasswordField;
 
 public class RegisterGUI extends JFrame {
 	
