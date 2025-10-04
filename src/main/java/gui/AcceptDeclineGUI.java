@@ -32,7 +32,7 @@ public class AcceptDeclineGUI extends JFrame{
 
 		driver=d;
 		
-		setTitle(ResourceBundle.getBundle("Etiquetas").getString("AcceptDeclineGUI.AcceptDecline"));
+		setTitle(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("AcceptDeclineGUI.AcceptDecline"));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -68,7 +68,7 @@ public class AcceptDeclineGUI extends JFrame{
 			i++;
 		}
 		
-		btnNewButtonAccept = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AcceptDeclineGUI.Accept")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonAccept = new JButton(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("AcceptDeclineGUI.Accept")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonAccept.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RideBooked rb = (RideBooked) comboBoxRequests.getSelectedItem();
@@ -83,7 +83,7 @@ public class AcceptDeclineGUI extends JFrame{
 		btnNewButtonAccept.setBounds(65, 163, 118, 32);
 		contentPane.add(btnNewButtonAccept);
 		
-		btnNewButtonDecline = new JButton(ResourceBundle.getBundle("Etiquetas").getString("AcceptDeclineGUI.Decline")); //$NON-NLS-1$ //$NON-NLS-2$
+		btnNewButtonDecline = new JButton(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("AcceptDeclineGUI.Decline")); //$NON-NLS-1$ //$NON-NLS-2$
 		btnNewButtonDecline.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				RideBooked rb = (RideBooked) comboBoxRequests.getSelectedItem();
