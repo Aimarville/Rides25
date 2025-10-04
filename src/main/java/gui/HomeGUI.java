@@ -36,6 +36,8 @@ public class HomeGUI extends JFrame {
 	private JPanel panel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
+	private static final String RLOCALE = "Locale: ";
+	
 	/**
 	 * This is the default constructor
 	 */
@@ -51,7 +53,7 @@ public class HomeGUI extends JFrame {
 		rdbtnNewRadioButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Locale.setDefault(new Locale("en"));
-				System.out.println("Locale: "+Locale.getDefault());
+				System.out.println(RLOCALE+Locale.getDefault());
 				paintAgain();				}
 		});
 		buttonGroup.add(rdbtnNewRadioButton);
@@ -60,7 +62,7 @@ public class HomeGUI extends JFrame {
 		rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Locale.setDefault(new Locale("eus"));
-				System.out.println("Locale: "+Locale.getDefault());
+				System.out.println(RLOCALE+Locale.getDefault());
 				paintAgain();				}
 		});
 		buttonGroup.add(rdbtnNewRadioButton_1);
@@ -69,7 +71,7 @@ public class HomeGUI extends JFrame {
 		rdbtnNewRadioButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Locale.setDefault(new Locale("es"));
-				System.out.println("Locale: "+Locale.getDefault());
+				System.out.println(RLOCALE+Locale.getDefault());
 				paintAgain();
 			}
 		});
