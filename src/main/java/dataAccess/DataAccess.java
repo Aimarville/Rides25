@@ -328,7 +328,7 @@ public void open(){
 		}
 	}
 	
-	public ArrayList<RideBooked> getBookingsDriver(String email, String password){
+	public ArrayList<RideBooked> getBookingsDriver(String email){
 		
 		ArrayList<RideBooked> ema = new ArrayList<RideBooked>();;
 		Driver driver = null;

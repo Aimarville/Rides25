@@ -103,13 +103,6 @@ public class BLFacadeImplementation  implements BLFacade {
 	/**
 	 * {@inheritDoc}
 	 */
-   /* @WebMethod	
-	 public void initializeBD(){
-    	dbManager.open();
-		dbManager.initializeDB();
-		dbManager.close();
-	}
-    */
     @WebMethod	
 	 public boolean register(String email, String password, String type){
     	boolean res;
@@ -147,10 +140,10 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
    
    @WebMethod	
-   public ArrayList<RideBooked> getBookingsDriver(String email,String password){
+   public ArrayList<RideBooked> getBookingsDriver(String email){
  	ArrayList<RideBooked> res;
  	dbManager.open();
-		res = dbManager.getBookingsDriver(email, password);
+		res = dbManager.getBookingsDriver(email);
 		dbManager.close();
 		return res;
 	}
