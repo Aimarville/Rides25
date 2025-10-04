@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//import domain.Booking;
 import domain.Ride;
 import domain.RideBooked;
 import domain.User;
@@ -80,7 +79,6 @@ public interface BLFacade  {
 	 * This method calls the data access to initialize the database with some events and questions.
 	 * It is invoked only when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
 	 */	
-	//@WebMethod public void initializeBD();
 
 	@WebMethod public boolean register(String email, String password, String type);
 	
@@ -93,7 +91,6 @@ public interface BLFacade  {
 	@WebMethod public List<RideBooked> getBookingsDriver(String email,String password);
 	
 	@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, int rideID);
-	//@WebMethod public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, String from, String to,  Date date, int nPlaces, float price);
 	
 	@WebMethod public boolean accept(int bookNumber);
 	

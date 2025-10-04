@@ -61,7 +61,6 @@ public class DriverMainGUI extends JFrame {
 
 		driver=d;
 		
-		// this.setSize(271, 295);
 		this.setSize(495, 290);
 		jLabelSelectOption = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("MainGUI.SelectOption"));
 		jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));

@@ -30,12 +30,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
 		
-		
-		    dbManager=new DataAccess();
-		    
-		//dbManager.close();
-
-		
+		dbManager=new DataAccess();
 	}
 	
     public BLFacadeImplementation(DataAccess da)  {
@@ -172,11 +167,9 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
    
    public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, int rideID){
-   //public boolean bookRide(Passenger passenger, String driveremail, int seatsBooked, String from, String to,  Date date, int nPlaces, float price){
 	   Boolean res;
 	   dbManager.open();
 		res = dbManager.bookRide(passenger, driveremail, seatsBooked, rideID);
-		//res = dbManager.bookRide(passenger, driveremail, seatsBooked, from, to, date, nPlaces, price);
 		dbManager.close();
 	   return res;
    }

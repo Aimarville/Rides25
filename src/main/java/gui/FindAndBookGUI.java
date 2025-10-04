@@ -255,7 +255,6 @@ public class FindAndBookGUI extends JFrame {
 				
 				Ride ride = facade.getRideByEmail(email, origin, dest, selectedDate);
 				
-				//if(facade.bookRide(passenger, email, bookedseats, origin, dest, UtilDate.trim(jCalendar1.getDate()), seats, price)) {
 				if(facade.bookRide(passenger, email, bookedseats, ride.getRideNumber())) {
 					jLabelEvents.setText(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindAndBookGUI.Co"));
 				}else {
@@ -308,7 +307,6 @@ public class FindAndBookGUI extends JFrame {
 			// the empty days before day 1 of month, and all the days previous to each day.
 			// That number of components is calculated with "offset" and is different in
 			// English and Spanish
-			//			    		  Component o=(Component) jCalendar.getDayChooser().getDayPanel().getComponent(i+offset);; 
 			Component o = (Component) jCalendar.getDayChooser().getDayPanel()
 					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);
 			o.setBackground(color);

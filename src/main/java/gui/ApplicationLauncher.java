@@ -75,8 +75,6 @@ public class ApplicationLauncher {
 			
 			System.out.println("Error in ApplicationLauncher: "+e.toString());
 		}
-		//a.pack();
-
 
 	}
 
