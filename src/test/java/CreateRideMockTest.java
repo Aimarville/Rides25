@@ -152,11 +152,7 @@ public class CreateRideMockTest {
 			//assertTrue(existRide);
 			//testDA.close();
 			
-		   } catch (RideAlreadyExistException e) {
-			// if the program goes to this point fail  
-			fail();
-			
-			} catch (RideMustBeLaterThanTodayException e) {
+		   }catch (RideMustBeLaterThanTodayException | RideAlreadyExistException e) {
 				// if the program goes to this point fail  
 
 			fail();
@@ -183,7 +179,7 @@ public class CreateRideMockTest {
 				try {
 					rideDate = sdf.parse("05/10/2025");
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
+
 					e.printStackTrace();
 				}	
 				
@@ -199,16 +195,12 @@ public class CreateRideMockTest {
 				assertNull(ride);
 				
 				
-			   } catch (RideAlreadyExistException e) {
+			   } catch (RideAlreadyExistException | RideMustBeLaterThanTodayException e) {
 				// TODO Auto-generated catch block
 				// if the program goes to this point fail  
 				fail();
 
-				} catch (RideMustBeLaterThanTodayException e) {
-				// TODO Auto-generated catch block
-					fail();
-
-				} catch (Exception e) {
+				}catch (Exception e) {
 				// TODO Auto-generated catch block
 					fail();
 
@@ -234,7 +226,6 @@ public class CreateRideMockTest {
 		try {
 			rideDate = sdf.parse("05/10/2025");
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 		Ride ride=null;
@@ -251,15 +242,10 @@ public class CreateRideMockTest {
 			//verify the results
 			assertNull(ride);
 			
-		   } catch (RideAlreadyExistException e) {
-			// TODO Auto-generated catch block
+		   } catch (RideAlreadyExistException | RideMustBeLaterThanTodayException e) {
 			// if the program goes to this point fail  
 			fail();
-			} catch (RideMustBeLaterThanTodayException e) {
-			// TODO Auto-generated catch block
-			fail();
-			}  catch (Exception e) {
-			// TODO Auto-generated catch block
+		   }catch (Exception e) {
 			fail();
 			}
    }
