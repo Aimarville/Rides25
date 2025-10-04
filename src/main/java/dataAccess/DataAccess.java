@@ -2,10 +2,6 @@ package dataAccess;
 
 import java.io.File;
 
-import java.net.NoRouteToHostException;
-
-import java.text.ParseException;
-
 import java.util.*;
 
 import javax.persistence.*;
