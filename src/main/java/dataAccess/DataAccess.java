@@ -6,6 +6,8 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.objenesis.tck.search.SystemOutListener;
+
 import configuration.*;
 
 import domain.*;
@@ -509,11 +511,12 @@ public void open(){
 		
 		Driver dr = null;
 		dr = db.find(Driver.class, dGmail);
-		db.persist(dr);
 		if (rid !=null){
 			if (rid.getBookings() != null) {
-				List<RideBooked> rb = rid.getBookings();
+				List<RideBooked> rb = new ArrayList<>(rid.getBookings());
 				for(RideBooked rbm : rb) {
+					System.out.println(rb);
+					db.persist(dr);
 					
 					rbm.removeBookRide();
 					dr.removeRide(rid.getFrom(), rid.getTo(), rid.getDate());
