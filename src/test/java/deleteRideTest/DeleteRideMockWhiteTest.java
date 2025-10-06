@@ -16,7 +16,7 @@ import dataAccess.*;
 
 import domain.*;
 
-public class MockWhiteTest {
+public class DeleteRideMockWhiteTest {
 	
 	static DataAccess sut;
 	
