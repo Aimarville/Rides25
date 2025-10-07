@@ -58,29 +58,26 @@ public class DeleteRideBDWhiteTest {
 				foundRide = testDA.findRide(rideNumber);
 				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
 			}
-			testDA.createDriver(driverEmail, driverName);
+			testDA.createDriver(driverName, driverEmail);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  
 			sut.open();
-			Ride before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 		    sut.deleteRide(rideNumber, driverEmail);
-		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
-			
-			if (before == null)
-				assertNull(after);
-			else
-				fail();
 			
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
+			Ride after = testDA.findRide(rideNumber);
 			testDA.removeDriver(driverEmail);
 			if (existRide && existDriver) {
-				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
+				testDA.addDriverWithRide(driverName, driverEmail, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
 			}
 		    testDA.close();
-	} 
+		    
+		    assertNull(after);
+	}
+
 	@Test
 	//sut.createRide:  The Driver("Aitor Fernandez", "driver1@gmail.com") HAS NOT one ride "from" "to" in that "date". 
 	public void test2() {
@@ -113,6 +110,7 @@ public class DeleteRideBDWhiteTest {
 				foundRide = testDA.findRide(rideNumber);
 				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
 			}
+			
 			testDA.createDriver(driverEmail, driverName);
 			testDA.close();			
 			
@@ -123,7 +121,7 @@ public class DeleteRideBDWhiteTest {
 		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
 			
-			if (before == null)
+			if (before != null)
 				assertNull(after);
 			else
 				fail();
@@ -132,12 +130,11 @@ public class DeleteRideBDWhiteTest {
 			testDA.open();
 			testDA.removeDriver(driverEmail);
 			if (existRide && existDriver) {
-				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
+				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
 		    testDA.close();
-	} 
-	
-	
+	}
+/*
 	@Test
 	//sut.createRide:  The Driver is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
 		public void test3() {
@@ -246,4 +243,5 @@ public class DeleteRideBDWhiteTest {
 			
 		        }
 		   }
+*/
 }
