@@ -1,17 +1,12 @@
 package testOperations;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 
-import configuration.ConfigXML;
-import domain.Car;
-import domain.Driver;
-import domain.Ride;
+import configuration.*;
+
+import domain.*;
 
 
 public class TestDataAccess {
@@ -104,6 +99,28 @@ public class TestDataAccess {
 			}
 		return null;
 	}
+	
+	public Driver addDriverWithRideAndBookings(int rideNumber, String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car, List<RideBooked> bookings) {
+		System.out.println(">> TestDataAccess: addDriverWithRide");
+			Driver driver=null;
+			db.getTransaction().begin();
+			try {
+				 driver = db.find(Driver.class, email);
+				if (driver==null)
+					driver=new Driver(name,email);
+			    driver.addRide(from, to, date, nPlaces, price, car);
+			    for (Ride r : driver.getRides()) {
+			    	if (r.getRideNumber() == rideNumber)
+			    		r.setBookings(bookings);
+			    }
+				db.getTransaction().commit();
+				return driver;
+			}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		return null;
+	}
 		
 		
 		public boolean existRide(String email, String from, String to, Date date) {
@@ -114,6 +131,16 @@ public class TestDataAccess {
 			} else 
 			return false;
 		}
+		
+		public Ride findRide(int rideNumber) {
+			System.out.println(">> TestDataAccess: findRide");
+			Ride r = db.find(Ride.class, rideNumber);
+			if (r != null)
+				return r;
+			else
+				return null;
+		}
+		
 		public Ride removeRide(String email, String from, String to, Date date ) {
 			System.out.println(">> TestDataAccess: removeRide");
 			Driver d = db.find(Driver.class, email);

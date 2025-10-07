@@ -1,4 +1,4 @@
-/*package deleteRideTest;
+package deleteRideTest;
 
 import static org.junit.Assert.*;
 
@@ -43,48 +43,49 @@ public class DeleteRideBDWhiteTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		boolean existDriver=false;
-		try {
+		boolean existRide = false;
+		Ride foundRide = null;
+		boolean existDriver = false;
 			
 			//define parameters
-			
+			int rideNumber = 9;
 			
 			//configure the state of the system (create object in the database)
 			testDA.open();
-			 existDriver=testDA.existDriver(driverEmail);
-			testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, 0, 0, null);
+			existDriver=testDA.existDriver(driverEmail);
+			existRide=testDA.existRide(driverEmail, rideFrom, rideTo, rideDate);
+			if (existRide) {
+				foundRide = testDA.findRide(rideNumber);
+				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
+			}
+			testDA.createDriver(driverEmail, driverName);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  
 			sut.open();
-		    sut.createRide(rideFrom, rideTo, rideDate, 0, 0, null,  driverEmail);
+			Ride before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
+		    sut.deleteRide(rideNumber, driverEmail);
+		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
 			
-			fail();
+			if (before == null)
+				assertNull(after);
+			else
+				fail();
 			
-		   } catch (RideAlreadyExistException e) {
-			 //verify the results
-				sut.close();
-				assertTrue(true);
-			} catch (RideMustBeLaterThanTodayException e) {
-			// TODO Auto-generated catch block
-			fail();
-		} finally {
-				  //Remove the created objects in the database (cascade removing)   
-				testDA.open();
-				  if (existDriver) 
-					  testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
-				  else 
-					  testDA.removeDriver(driverEmail);
-		          testDA.close();
-		        }
-		   } 
+			//Remove the created objects in the database (cascade removing)   
+			testDA.open();
+			testDA.removeDriver(driverEmail);
+			if (existRide && existDriver) {
+				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
+			}
+		    testDA.close();
+	} 
 	@Test
 	//sut.createRide:  The Driver("Aitor Fernandez", "driver1@gmail.com") HAS NOT one ride "from" "to" in that "date". 
 	public void test2() {
-		//define paramaters
-		String driverName="Aitor Fernandez";
 		String driverEmail="driver1@gmail.com";
+		String driverName="Aitor Fernandez";
 
 		String rideFrom="Donostia";
 		String rideTo="Zarautz";
@@ -97,53 +98,44 @@ public class DeleteRideBDWhiteTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		
-		try {
-			//Check if exist this ride for this driver, and if exist, remove it.
+		boolean existRide = false;
+		Ride foundRide = null;
+		boolean existDriver = false;
 			
+			//define parameters
+			int rideNumber = 9;
+			
+			//configure the state of the system (create object in the database)
 			testDA.open();
-			boolean b=testDA.existRide(driverEmail,rideFrom, rideTo, rideDate);
-			if (b) testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
-			testDA.close();
-			
+			existDriver=testDA.existDriver(driverEmail);
+			existRide=testDA.existRide(driverEmail, rideFrom, rideTo, rideDate);
+			if (existRide) {
+				foundRide = testDA.findRide(rideNumber);
+				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
+			}
+			testDA.createDriver(driverEmail, driverName);
+			testDA.close();			
 			
 			//invoke System Under Test (sut)  
 			sut.open();
-			Ride ride=sut.createRide(rideFrom, rideTo, rideDate, 0, 0, null,  driverEmail);
+			Ride before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
+		    sut.deleteRide(rideNumber, driverEmail);
+		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
-			//verify the results
-			assertNotNull(ride);
-			assertEquals(ride.getFrom(),rideFrom);
-			assertEquals(ride.getTo(),rideTo);
-			assertEquals(ride.getDate(),rideDate);
 			
-			//ride datubasean dago
-			testDA.open();
-			boolean existRide=testDA.existRide(driverEmail,ride.getFrom(), ride.getTo(), ride.getDate());
-				
-			assertTrue(existRide);
-			testDA.close();
+			if (before == null)
+				assertNull(after);
+			else
+				fail();
 			
-		   } catch (RideAlreadyExistException e) {
-			// if the program goes to this point fail  
-			fail();
-			//redone state of the system (create object in the database)
+			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
-			driver = testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, 0, 0, null);
-			testDA.close();	
-			
-			} catch (RideMustBeLaterThanTodayException e) {
-				// if the program goes to this point fail  
-
-			fail();
-			//redone state of the system (create object in the database)
-			testDA.open();
-			driver = testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, 0, 0, null);
-			testDA.close();	
-		} finally {
-				      
-		        }
-		   } 
+			testDA.removeDriver(driverEmail);
+			if (existRide && existDriver) {
+				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
+			}
+		    testDA.close();
+	} 
 	
 	
 	@Test
@@ -255,4 +247,3 @@ public class DeleteRideBDWhiteTest {
 		        }
 		   }
 }
-*/
