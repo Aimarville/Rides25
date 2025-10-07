@@ -326,6 +326,12 @@ public void open(){
 		}
 	}
 	
+	/**
+	 * Gidari bati lotuta dauden erreserba guztiak lista baten barruan gordetzen ditu.
+	 * @param email Gidariaren email helbidea
+	 * @return Erreserba lista bat gidari honi lotutako erreserbekin
+	 * @author Asier
+	 */
 	public ArrayList<RideBooked> getBookingsDriver(String email){
 		
 		ArrayList<RideBooked> ema = new ArrayList<RideBooked>();;
@@ -500,6 +506,16 @@ public void open(){
 		
 		return rides;
 	}
+	
+	/**
+	 * Bidai bat ezabatzen du.
+	 * Bidaia hau ez badago DatuBasean ez da ezer egingo.
+	 * Bidaia honek ez baditu erreserbarik bidaia zuzenean ezabatuko du.
+	 * Bidaiak erreserbak baditu honen erreserbak banan banan ezabatuko ditu eta ondoren bidaia ezabatuko da.
+	 * @param RideNumber Bidaiaren zenbakia
+	 * @param dGmail Gidariaren email helbidea
+	 * @author Asier
+	 */
 	public void deleteRide(int RideNumber, String dGmail) {
 		System.out.println(RideNumber);
 		
