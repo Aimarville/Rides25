@@ -83,7 +83,7 @@ public class TestDataAccess {
 	public Driver findDriver(String email) {
 		return db.find(Driver.class, email);
 	}
-		
+	
 	public Driver addDriverWithRide(String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car) {
 		System.out.println(">> TestDataAccess: addDriverWithRide");
 			Driver driver=null;
@@ -111,7 +111,8 @@ public class TestDataAccess {
 				 driver = db.find(Driver.class, email);
 				if (driver==null)
 					driver=new Driver(email,name);
-			    driver.addRide(from, to, date, nPlaces, price, car);
+			    Ride addedRide = driver.addRide(from, to, date, nPlaces, price, car);
+			    addedRide.setRideNumber(rideNumber);
 			    for (Ride r : driver.getRides()) {
 			    	if (r.getRideNumber() == rideNumber)
 			    		r.setBookings(bookings);
@@ -176,7 +177,7 @@ public class TestDataAccess {
 			return null;
 
 		}
-	
+		
 		public boolean existPassenger(String email) {
 			return db.find(Passenger.class, email) != null;
 		}
@@ -222,11 +223,9 @@ public class TestDataAccess {
 				if (driver==null)
 					driver=new Driver(email,pass);
 			    Ride addedRide = driver.addRide(from, to, date, nPlaces, price, car);
-			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
+			    addedRide.setRideNumber(rideNumber);
 			    addedRide.addBookRide(book);
-			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
 			    book.setRide(addedRide);
-			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
 			    db.persist(driver);
 				db.getTransaction().commit();
 				return book;
@@ -264,6 +263,19 @@ public class TestDataAccess {
 		public RideBooked findBook(int bookNumber) {
 			return db.find(RideBooked.class, bookNumber);
 		}
+		
+		/*
+		public void removeRideWithNumber(int rideNumber) {
+			db.getTransaction().begin();
+			System.out.println(">> TestDataAccess: removeRideWithNumber");
+			int deletedCount = db.createQuery(
+				    "DELETE FROM Ride r WHERE r.rideNumber = :RN")
+				    .setParameter("RN", rideNumber)
+				    .executeUpdate();
+			db.getTransaction().commit();
+		}
+		*/
+		
 }
 
 
