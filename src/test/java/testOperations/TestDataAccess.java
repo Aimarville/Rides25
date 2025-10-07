@@ -83,10 +83,6 @@ public class TestDataAccess {
 	public Driver findDriver(String email) {
 		return db.find(Driver.class, email);
 	}
-	
-	public Driver findDriver(String email) {
-		return db.find(Driver.class, email);
-	}
 		
 	public Driver addDriverWithRide(String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car) {
 		System.out.println(">> TestDataAccess: addDriverWithRide");
@@ -180,7 +176,7 @@ public class TestDataAccess {
 			return null;
 
 		}
-'
+	
 		public boolean existPassenger(String email) {
 			return db.find(Passenger.class, email) != null;
 		}
