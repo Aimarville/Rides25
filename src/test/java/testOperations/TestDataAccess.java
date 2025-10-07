@@ -78,8 +78,10 @@ public class TestDataAccess {
     }
 	public boolean existDriver(String email) {
 		 return  db.find(Driver.class, email)!=null;
-		 
-
+	}
+	
+	public Driver findDriver(String email) {
+		return db.find(Driver.class, email);
 	}
 	
 	public Driver findDriver(String email) {
@@ -111,8 +113,8 @@ public class TestDataAccess {
 			db.getTransaction().begin();
 			try {
 				 driver = db.find(Driver.class, email);
-				 if (driver==null)
-						driver=new Driver(email,name);
+				if (driver==null)
+					driver=new Driver(email,name);
 			    driver.addRide(from, to, date, nPlaces, price, car);
 			    for (Ride r : driver.getRides()) {
 			    	if (r.getRideNumber() == rideNumber)
@@ -133,11 +135,11 @@ public class TestDataAccess {
 			Driver driver=null;
 			db.getTransaction().begin();
 			try {
-				 driver = db.find(Driver.class, email);
+				driver = db.find(Driver.class, email);
 				if (driver==null)
 					driver=new Driver(email,pass);
 			    driver.setRides(rideList);
-			    
+			    db.persist(driver);
 				db.getTransaction().commit();
 				return driver;
 			}
@@ -178,7 +180,7 @@ public class TestDataAccess {
 			return null;
 
 		}
-
+'
 		public boolean existPassenger(String email) {
 			return db.find(Passenger.class, email) != null;
 		}
@@ -215,6 +217,57 @@ public class TestDataAccess {
 				return passenger;
 	    }
 		
+		public RideBooked addDriverWithRideAndBook(Integer rideNumber, String email, String pass, String from, String to, Date date, int nPlaces, float price, Car car, RideBooked book) {
+			System.out.println(">> TestDataAccess: addDriverWithRideAndBook");
+			Driver driver=null;
+			db.getTransaction().begin();
+			try {
+				 driver = db.find(Driver.class, email);
+				if (driver==null)
+					driver=new Driver(email,pass);
+			    Ride addedRide = driver.addRide(from, to, date, nPlaces, price, car);
+			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
+			    addedRide.addBookRide(book);
+			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
+			    book.setRide(addedRide);
+			    System.out.println(addedRide.toString() + " y " + addedRide.getBookings());
+			    db.persist(driver);
+				db.getTransaction().commit();
+				return book;
+			}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		return null;
+		}
+		
+		public RideBooked removeBook(Integer rideNumber, int bookNumber) {
+			System.out.println(">> TestDataAccess: removeBook");
+			Ride r = db.find(Ride.class, rideNumber);
+			if (r!=null) {
+				db.getTransaction().begin();
+				System.out.println(r.getBookings());
+				System.out.println(db.find(RideBooked.class, 1));
+				RideBooked rb= r.removeBookRide(bookNumber);
+				db.remove(rb);
+				System.out.println(r.getBookings());
+				System.out.println(db.find(RideBooked.class, 1));
+				db.getTransaction().commit();
+				return rb;
+			} else 
+			return null;
+		}
+		
+		public void removeBookNoRide(int bookNumber) {
+			RideBooked rb = db.find(RideBooked.class, bookNumber);
+			db.getTransaction().begin();
+			db.remove(rb);
+			db.getTransaction().commit();
+		}
+		
+		public RideBooked findBook(int bookNumber) {
+			return db.find(RideBooked.class, bookNumber);
+		}
 }
 
 
