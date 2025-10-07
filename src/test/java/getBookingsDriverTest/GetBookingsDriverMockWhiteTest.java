@@ -2,10 +2,9 @@ package getBookingsDriverTest;
 
 import static org.junit.Assert.assertTrue;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import java.text.*;
+
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -19,7 +18,7 @@ import dataAccess.*;
 
 public class GetBookingsDriverMockWhiteTest {
 	
-static DataAccess sut;
+	static DataAccess sut;
 	
 	protected MockedStatic <Persistence> persistenceMock;
 
