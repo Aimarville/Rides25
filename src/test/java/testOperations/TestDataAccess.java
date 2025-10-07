@@ -52,7 +52,7 @@ public class TestDataAccess {
 	}
 
 	public boolean removeDriver(String driverEmail) {
-		System.out.println(">> TestDataAccess: removeRide");
+		System.out.println(">> TestDataAccess: removeDriver");
 		Driver d = db.find(Driver.class, driverEmail);
 		if (d!=null) {
 			db.getTransaction().begin();
@@ -89,8 +89,9 @@ public class TestDataAccess {
 			try {
 				 driver = db.find(Driver.class, email);
 				if (driver==null)
-					driver=new Driver(name,email);
+					driver=new Driver(email,name);
 			    driver.addRide(from, to, date, nPlaces, price, car);
+			    db.persist(driver);
 				db.getTransaction().commit();
 				return driver;
 			}
@@ -100,19 +101,20 @@ public class TestDataAccess {
 		return null;
 	}
 	
-	public Driver addDriverWithRideAndBookings(int rideNumber, String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car, List<RideBooked> bookings) {
+	public Driver addDriverWithRideAndBookings(Integer rideNumber, String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car, List<RideBooked> bookings) {
 		System.out.println(">> TestDataAccess: addDriverWithRideAndBookings");
 			Driver driver=null;
 			db.getTransaction().begin();
 			try {
 				 driver = db.find(Driver.class, email);
-				if (driver==null)
-					driver=new Driver(name,email);
+				 if (driver==null)
+						driver=new Driver(email,name);
 			    driver.addRide(from, to, date, nPlaces, price, car);
 			    for (Ride r : driver.getRides()) {
 			    	if (r.getRideNumber() == rideNumber)
 			    		r.setBookings(bookings);
 			    }
+			    db.persist(driver);
 				db.getTransaction().commit();
 				return driver;
 			}
@@ -131,6 +133,7 @@ public class TestDataAccess {
 				if (driver==null)
 					driver=new Driver(email,pass);
 			    driver.setRides(rideList);
+			    
 				db.getTransaction().commit();
 				return driver;
 			}
@@ -139,8 +142,7 @@ public class TestDataAccess {
 			}
 		return null;
 	}
-		
-		
+	
 		public boolean existRide(String email, String from, String to, Date date) {
 			System.out.println(">> TestDataAccess: existRide");
 			Driver d = db.find(Driver.class, email);
