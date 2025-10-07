@@ -87,24 +87,23 @@ public class TestDataAccess {
 
 	}
 		
-		public Driver addDriverWithRide(String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car) {
-			System.out.println(">> TestDataAccess: addDriverWithRide");
-				Driver driver=null;
-				db.getTransaction().begin();
-				try {
-					 driver = db.find(Driver.class, email);
-					if (driver==null)
-						driver=new Driver(name,email);
-				    driver.addRide(from, to, date, nPlaces, price, car);
-					db.getTransaction().commit();
-					return driver;
-					
-				}
-				catch (Exception e){
-					e.printStackTrace();
-				}
-				return null;
-	    }
+	public Driver addDriverWithRide(String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car) {
+		System.out.println(">> TestDataAccess: addDriverWithRide");
+			Driver driver=null;
+			db.getTransaction().begin();
+			try {
+				 driver = db.find(Driver.class, email);
+				if (driver==null)
+					driver=new Driver(name,email);
+			    driver.addRide(from, to, date, nPlaces, price, car);
+				db.getTransaction().commit();
+				return driver;
+			}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		return null;
+	}
 		
 		
 		public boolean existRide(String email, String from, String to, Date date) {
