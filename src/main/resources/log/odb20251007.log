@@ -1,0 +1,32 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-07 11:17:54 #1 store] 
+Database 'C:\Users\aimar\git\Rides25\src\main\resources\rides.temp' is opened by 28628@LAPTOP-5UDBPQNM
+
+[2025-10-07 11:17:54 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-10-07 11:17:54 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-07 11:17:54 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-07 11:17:54 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-07 11:17:54 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-07 11:17:54 #7 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-07 11:17:54 #8 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-07 11:17:54 #9 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-07 11:17:54 #10 type] 
+Type domain.Alerta is not enhanced.
+
