@@ -157,7 +157,7 @@ static DataAccess sut;
 		Driver foundDriver = db.find(Driver.class, email);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		Date rideDate=null;;
+		Date rideDate=null;
 		try {
 			rideDate = sdf.parse("06/10/2025");
 		} catch (ParseException e) {

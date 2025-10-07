@@ -101,7 +101,7 @@ public class TestDataAccess {
 	}
 	
 	public Driver addDriverWithRideAndBookings(int rideNumber, String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car, List<RideBooked> bookings) {
-		System.out.println(">> TestDataAccess: addDriverWithRide");
+		System.out.println(">> TestDataAccess: addDriverWithRideAndBookings");
 			Driver driver=null;
 			db.getTransaction().begin();
 			try {
@@ -113,6 +113,24 @@ public class TestDataAccess {
 			    	if (r.getRideNumber() == rideNumber)
 			    		r.setBookings(bookings);
 			    }
+				db.getTransaction().commit();
+				return driver;
+			}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		return null;
+	}
+	
+	public Driver addDriverWithRideList(String email, String pass, List<Ride> rideList) {
+		System.out.println(">> TestDataAccess: addDriverWithRideList");
+			Driver driver=null;
+			db.getTransaction().begin();
+			try {
+				 driver = db.find(Driver.class, email);
+				if (driver==null)
+					driver=new Driver(email,pass);
+			    driver.setRides(rideList);
 				db.getTransaction().commit();
 				return driver;
 			}
