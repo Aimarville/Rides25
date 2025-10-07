@@ -203,7 +203,7 @@ public class Ride implements Serializable {
 	public List<RideBooked> getBookings() {
 		return bookings;
 	}
-
+	
 	public void setBookings(List<RideBooked> bookings) {
 		this.bookings = bookings;
 	}

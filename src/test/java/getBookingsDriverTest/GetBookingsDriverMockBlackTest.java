@@ -51,11 +51,8 @@ static DataAccess sut;
 	public void test1() {
 		String email = "asier@mail.com";
 		
-		if (email != null) {
-			assertTrue(true);
-		}else {
-			fail();
-		}
+		assertTrue(email!=null);
+
 	}
 	
 	@Test
@@ -63,11 +60,194 @@ static DataAccess sut;
 		String email = "asier@mail.com";
 		Driver driver = new Driver(email, "1234");
 		
-		Mockito.when(db.find(Driver.class, driver)).thenReturn(driver);
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);
 		
 		Driver foundDriver = db.find(Driver.class, email);
 		
-		if (foundDriver != null) {
+		assertEquals(foundDriver.getEmail(),email);
+	}
+	
+	@Test
+	public void test3() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("06/10/2025");
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		
+		Ride ride = new Ride(1, "Donostia", "Bilbo", rideDate, 4, 15, driver);
+		ArrayList<Ride> rideList = new ArrayList<Ride>();
+		rideList.add(ride);
+		driver.setRides(rideList);
+		
+		if (!foundDriver.getRides().isEmpty()) {
+			assertTrue(true);
+		}else {
+			fail();
+		}
+	}
+	
+	@Test
+	public void test4() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);
+		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		if (foundDriver.getRides().isEmpty()) {
+			assertTrue(true);
+		}else {
+			fail();
+		}
+	}
+	
+	@Test
+	public void test5() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("06/10/2025");
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		
+		Ride ride = new Ride(1, "Donostia", "Bilbo", rideDate, 4, 15, driver);
+		ArrayList<Ride> rideList = new ArrayList<Ride>();
+		rideList.add(ride);
+		driver.setRides(rideList);
+		
+		String pEmail = "pass@mail.com";
+		Passenger pass = new Passenger(pEmail, "5678");
+		RideBooked book = new RideBooked(1, 2, ride, pass);
+		ArrayList<RideBooked> bookList = new ArrayList<RideBooked>();
+		bookList.add(book);
+		ride.setBookings(bookList);
+		
+		if (!ride.getBookings().isEmpty()) {
+			assertTrue(true);
+		}else {
+			fail();
+		}
+	}
+	
+	@Test
+	public void test6() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("06/10/2025");
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		
+		Ride ride = new Ride(1, "Donostia", "Bilbo", rideDate, 4, 15, driver);
+		ArrayList<Ride> rideList = new ArrayList<Ride>();
+		rideList.add(ride);
+		driver.setRides(rideList);
+
+		ArrayList<RideBooked> bookList = new ArrayList<RideBooked>();
+		ride.setBookings(bookList);
+		
+		if (ride.getBookings().isEmpty()) {
+			assertTrue(true);
+		}else {
+			fail();
+		}
+	}
+	
+	@Test
+	public void test7() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("06/10/2025");
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		
+		Ride ride = new Ride(1, "Donostia", "Bilbo", rideDate, 4, 15, driver);
+		ArrayList<Ride> rideList = new ArrayList<Ride>();
+		rideList.add(ride);
+		driver.setRides(rideList);
+		
+		String pEmail = "pass@mail.com";
+		Passenger pass = new Passenger(pEmail, "5678");
+		RideBooked book = new RideBooked(1, 2, ride, pass);
+		book.setAproved(false);
+		ArrayList<RideBooked> bookList = new ArrayList<RideBooked>();
+		bookList.add(book);
+		ride.setBookings(bookList);
+		
+		if (!book.isAproved()) {
+			assertTrue(true);
+		}else {
+			fail();
+		}
+	}
+	
+	@Test
+	public void test8() {
+		String email = "asier@mail.com";
+		Driver driver = new Driver(email, "1234");
+		
+		Mockito.when(db.find(Driver.class, email)).thenReturn(driver);		
+		Driver foundDriver = db.find(Driver.class, email);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("06/10/2025");
+		} catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+		
+		Ride ride = new Ride(1, "Donostia", "Bilbo", rideDate, 4, 15, driver);
+		ArrayList<Ride> rideList = new ArrayList<Ride>();
+		rideList.add(ride);
+		driver.setRides(rideList);
+		
+		String pEmail = "pass@mail.com";
+		Passenger pass = new Passenger(pEmail, "5678");
+		RideBooked book = new RideBooked(1, 2, ride, pass);
+		book.setAproved(true);
+		ArrayList<RideBooked> bookList = new ArrayList<RideBooked>();
+		bookList.add(book);
+		ride.setBookings(bookList);
+		
+		if (book.isAproved()) {
 			assertTrue(true);
 		}else {
 			fail();
