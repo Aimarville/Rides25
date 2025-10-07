@@ -242,7 +242,7 @@ public class DeleteRideBDWhiteTest {
 			}
 			ArrayList<RideBooked> bookings = new ArrayList<>();
 			bookings.add(new RideBooked(5, 1, new Ride(rideNumber, rideFrom, rideTo, rideDate, 5, 3, new Driver(driverEmail, driverName)), null));
-			testDA.addDriverWithRideAndBookings(rideNumber, driverEmail, driverName, rideFrom, rideTo, rideDate, 5, 3, null, null);
+			testDA.addDriverWithRideAndBookings(rideNumber, driverEmail, driverName, rideFrom, rideTo, rideDate, 5, 3, null, bookings);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  

@@ -67,7 +67,7 @@ public class TestDataAccess {
 		Driver driver=null;
 			db.getTransaction().begin();
 			try {
-			    driver=new Driver(name,email);
+			    driver=new Driver(email,name);
 				db.persist(driver);
 				db.getTransaction().commit();
 			}
@@ -80,6 +80,10 @@ public class TestDataAccess {
 		 return  db.find(Driver.class, email)!=null;
 		 
 
+	}
+	
+	public Driver findDriver(String email) {
+		return db.find(Driver.class, email);
 	}
 		
 	public Driver addDriverWithRide(String email, String name, String from, String to,  Date date, int nPlaces, float price, Car car) {
@@ -175,7 +179,41 @@ public class TestDataAccess {
 
 		}
 
+		public boolean existPassenger(String email) {
+			return db.find(Passenger.class, email) != null;
+		}
+		
+		public Passenger findPassenger(String email) {
+			return db.find(Passenger.class, email);
+		}
+		
+		public boolean removePassenger(String email) {
+			System.out.println(">> TestDataAccess: removePassenger");
+			Passenger p = db.find(Passenger.class, email);
+			if (p!=null) {
+				db.getTransaction().begin();
+				db.remove(p);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
 
+		}
+		
+		public Passenger createPassenger(String email, String pass) {
+			System.out.println(">> TestDataAccess: addPassenger");
+			Passenger passenger=null;
+				db.getTransaction().begin();
+				try {
+				    passenger=new Passenger(email,pass);
+					db.persist(passenger);
+					db.getTransaction().commit();
+				}
+				catch (Exception e){
+					e.printStackTrace();
+				}
+				return passenger;
+	    }
 		
 }
 
