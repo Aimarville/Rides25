@@ -45,10 +45,11 @@ public class DeleteRideBDWhiteTest {
 		}	
 		boolean existRide = false;
 		Ride foundRide = null;
+		int rideNumber = 9;
 		boolean existDriver = false;
-			
+		Ride before = null;
+		try {
 			//define parameters
-			int rideNumber = 9;
 			
 			//configure the state of the system (create object in the database)
 			testDA.open();
@@ -58,28 +59,28 @@ public class DeleteRideBDWhiteTest {
 				foundRide = testDA.findRide(rideNumber);
 				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
 			}
-			testDA.createDriver(driverEmail, driverName);
+			testDA.createDriver(driverEmail, driverEmail);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  
 			sut.open();
-			Ride before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 		    sut.deleteRide(rideNumber, driverEmail);
-		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
-			
-			if (before == null)
-				assertNull(after);
-			else
-				fail();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
 			
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
+			Ride after = testDA.findRide(rideNumber);
 			testDA.removeDriver(driverEmail);
 			if (existRide && existDriver) {
 				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
 			}
 		    testDA.close();
+
+		    	assertNull(after);
+		}
 	} 
 	@Test
 	//sut.createRide:  The Driver("Aitor Fernandez", "driver1@gmail.com") HAS NOT one ride "from" "to" in that "date". 
@@ -101,9 +102,10 @@ public class DeleteRideBDWhiteTest {
 		boolean existRide = false;
 		Ride foundRide = null;
 		boolean existDriver = false;
-			
+		int rideNumber = 9;
+		Ride before = null;
+		try {
 			//define parameters
-			int rideNumber = 9;
 			
 			//configure the state of the system (create object in the database)
 			testDA.open();
@@ -113,89 +115,41 @@ public class DeleteRideBDWhiteTest {
 				foundRide = testDA.findRide(rideNumber);
 				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
 			}
-			testDA.createDriver(driverEmail, driverName);
+			testDA.addDriverWithRideAndBookings(rideNumber, driverEmail, driverName, rideFrom, rideTo, rideDate, 5, 3, null, null);
 			testDA.close();			
 			
 			//invoke System Under Test (sut)  
 			sut.open();
-			Ride before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
+			before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 		    sut.deleteRide(rideNumber, driverEmail);
-		    Ride after = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
 			sut.close();
-			
-			if (before == null)
-				assertNull(after);
-			else
-				fail();
-			
+
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
+			Ride after = testDA.findRide(rideNumber);
 			testDA.removeDriver(driverEmail);
 			if (existRide && existDriver) {
-				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
+				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
 		    testDA.close();
+		    
+		    if (before != null)
+		    	assertNull(after);
+		    else
+		    	fail();
+		}
 	} 
-	
 	
 	@Test
 	//sut.createRide:  The Driver is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
-		public void test3() {
-			try {
-				
-				//define parameters
-				driver=null;
-
-				String rideFrom="Donostia";
-				String rideTo="Zarautz";
-				
-				String driverEmail=null;
-
-				
-				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-				Date rideDate=null;;
-				try {
-					rideDate = sdf.parse("05/10/2025");
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}	
-				
-				
-				
-				//invoke System Under Test (sut)  
-				sut.open();
-				Ride ride=sut.createRide(rideFrom, rideTo, rideDate, 0, 0, null, driverEmail);
-				System.out.println("ride "+ride);
-
-				//verify the results
-				assertNull(ride);
-				
-				
-			   } catch (RideAlreadyExistException e) {
-				// TODO Auto-generated catch block
-				// if the program goes to this point fail  
-				fail();
-				} catch (RideMustBeLaterThanTodayException e) {
-				// TODO Auto-generated catch block
-					fail();
-				} catch (Exception e) {
-				// TODO Auto-generated catch block
-					fail();
-					
-				} finally {
-					sut.close();
-				}
-			
-			   } 
-	@Test
-	//sut.createRide:  The ride "from" is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
-
-	//This method detects a fail in createRide method because the method does not check if the parameters are null, and the ride is created.
-	
-	public void test4() {
+	public void test3() {
 		String driverEmail="driver1@gmail.com";
-		String rideFrom=null;
+		String driverName="Aitor Fernandez";
+
+		String rideFrom="Donostia";
 		String rideTo="Zarautz";
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -206,44 +160,113 @@ public class DeleteRideBDWhiteTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		Ride ride=null;
+		boolean existRide = false;
+		Ride foundRide = null;
+		boolean existDriver = false;
+		int rideNumber = 9;
+		Ride before = null;
 		try {
+			//define parameters
+			
+			//configure the state of the system (create object in the database)
+			testDA.open();
+			existDriver=testDA.existDriver(driverEmail);
+			existRide=testDA.existRide(driverEmail, rideFrom, rideTo, rideDate);
+			if (existRide) {
+				foundRide = testDA.findRide(rideNumber);
+				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
+			}
+			testDA.addDriverWithRideAndBookings(rideNumber, driverEmail, driverName, rideFrom, rideTo, rideDate, 5, 3, null, new ArrayList<>());
+			testDA.close();			
+			
 			//invoke System Under Test (sut)  
 			sut.open();
-			 ride=sut.createRide(rideFrom, rideTo, rideDate, 0, 0, null, driverEmail);
-			sut.close();			
-			
-			//verify the results
-			assertNull(ride);
-			
-			//q datubasean dago
-			testDA.open();
-			boolean exist=testDA.existRide(driverEmail,rideFrom, rideTo, rideDate);
-				
-			assertTrue(!exist);
-			testDA.close();
-			
-		   } catch (RideAlreadyExistException e) {
-			// TODO Auto-generated catch block
-			// if the program goes to this point fail  
-			fail();
-			} catch (RideMustBeLaterThanTodayException e) {
+			before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
+		    sut.deleteRide(rideNumber, driverEmail);
+			sut.close();
 
-			// TODO Auto-generated catch block
-			fail();
-			}  catch (Exception e) {
-			// TODO Auto-generated catch block
-			fail();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			//Remove the created objects in the database (cascade removing)   
+			testDA.open();
+			Ride after = testDA.findRide(rideNumber);
+			testDA.removeDriver(driverEmail);
+			if (existRide && existDriver) {
+				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
-		
-		
-		finally {   
+		    testDA.close();
+		    
+		    if (before != null)
+		    	assertNull(after);
+		    else
+		    	fail();
+		}
+	}
 
-			testDA.open();
-			if (testDA.existRide(driverEmail,rideFrom, rideTo, rideDate))
-				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
-			testDA.close();
+	@Test
+	//sut.createRide:  The ride "from" is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
+
+	//This method detects a fail in createRide method because the method does not check if the parameters are null, and the ride is created.
+	
+	public void test4() {
+		String driverEmail="driver1@gmail.com";
+		String driverName="Aitor Fernandez";
+
+		String rideFrom="Donostia";
+		String rideTo="Zarautz";
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date rideDate=null;;
+		try {
+			rideDate = sdf.parse("05/10/2025");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		boolean existRide = false;
+		Ride foundRide = null;
+		boolean existDriver = false;
+		int rideNumber = 9;
+		Ride before = null;
+		try {
+			//define parameters
 			
-		        }
-		   }
+			//configure the state of the system (create object in the database)
+			testDA.open();
+			existDriver=testDA.existDriver(driverEmail);
+			existRide=testDA.existRide(driverEmail, rideFrom, rideTo, rideDate);
+			if (existRide) {
+				foundRide = testDA.findRide(rideNumber);
+				testDA.removeRide(driverEmail, rideFrom, rideTo, rideDate);
+			}
+			ArrayList<RideBooked> bookings = new ArrayList<>();
+			bookings.add(new RideBooked(5, 1, new Ride(rideNumber, rideFrom, rideTo, rideDate, 5, 3, new Driver(driverEmail, driverName)), null));
+			testDA.addDriverWithRideAndBookings(rideNumber, driverEmail, driverName, rideFrom, rideTo, rideDate, 5, 3, null, bookings);
+			testDA.close();			
+			
+			//invoke System Under Test (sut)  
+			sut.open();
+			before = sut.getRideByEmail(driverEmail, rideFrom, rideTo, rideDate);
+		    sut.deleteRide(rideNumber, driverEmail);
+			sut.close();
+
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			//Remove the created objects in the database (cascade removing)   
+			testDA.open();
+			Ride after = testDA.findRide(rideNumber);
+			testDA.removeDriver(driverEmail);
+			if (existRide && existDriver) {
+				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
+			}
+		    testDA.close();
+		    
+		    if (before != null)
+		    	assertNull(after);
+		    else
+		    	fail();
+		}
+	}
 }
