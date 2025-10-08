@@ -73,8 +73,7 @@ public class DeleteRideBDWhiteTest {
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
 			Ride after = testDA.findRide(rideNumber);
-			testDA.removeDriver(driverEmail);
-			if (existRide && existDriver) {
+			if (existRide) {
 				testDA.addDriverWithRide(driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar());
 			}
 		    testDA.close();
@@ -130,8 +129,7 @@ public class DeleteRideBDWhiteTest {
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
 			Ride after = testDA.findRide(rideNumber);
-			testDA.removeDriver(driverEmail);
-			if (existRide && existDriver) {
+			if (existRide) {
 				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
 		    testDA.close();
@@ -191,8 +189,7 @@ public class DeleteRideBDWhiteTest {
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
 			Ride after = testDA.findRide(rideNumber);
-			testDA.removeDriver(driverEmail);
-			if (existRide && existDriver) {
+			if (existRide) {
 				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
 		    testDA.close();
@@ -257,8 +254,7 @@ public class DeleteRideBDWhiteTest {
 			//Remove the created objects in the database (cascade removing)   
 			testDA.open();
 			Ride after = testDA.findRide(rideNumber);
-			testDA.removeDriver(driverEmail);
-			if (existRide && existDriver) {
+			if (existRide) {
 				testDA.addDriverWithRideAndBookings(foundRide.getRideNumber(), driverEmail, driverName, rideFrom, rideTo, rideDate, foundRide.getnPlaces(), foundRide.getPrice(), foundRide.getCar(), foundRide.getBookings());
 			}
 		    testDA.close();
