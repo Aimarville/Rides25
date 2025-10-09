@@ -51,7 +51,7 @@
 		<sonar.organization>asieraldai</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>asieraldai_rides25-si2</sonar.projectKey>
-		<sonar.login>22ae15fb9134acc4096c70f1200f7cf395fd48b3</sonar.login>
+		<sonar.login>c6dfaedcc06648c1fd070275329af2fc9a296a4c</sonar.login>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
