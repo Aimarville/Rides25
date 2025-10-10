@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -41,7 +40,7 @@ jobs:
       - name: Set branch name
         run: echo "GITHUB_REF_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
 
-      - name: Build with Jacoco
+      - name: Build project with Jacoco
         run: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install org.jacoco:jacoco-maven-plugin:report
 
       - name: SonarCloud Analysis
@@ -49,5 +48,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn sonar:sonar \
           -Dsonar.login=$SONAR_TOKEN \
-          -Dsonar.branch.name=main
-		  -Dsonar.branch.target=main
+          -Dsonar.projectKey=asieraldai_rides25-si2 \
+          -Dsonar.organization=asieraldai \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.branch.name=$GITHUB_REF_NAME \
+          -Dsonar.branch.target=main
