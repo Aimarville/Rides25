@@ -45,13 +45,12 @@
 	</repositories>
 
 	<properties>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+    	<maven.compiler.source>1.8</maven.compiler.source>
 
-		<sonar.organization>asieraldai</sonar.organization>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.projectKey>asieraldai_rides25-si2</sonar.projectKey>
-		<sonar.login>c6dfaedcc06648c1fd070275329af2fc9a296a4c</sonar.login>
+    	<sonar.organization>asieraldai</sonar.organization>
+    	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    	<sonar.projectKey>asieraldai_rides25-si2</sonar.projectKey>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
