@@ -50,3 +50,4 @@ jobs:
         run: mvn sonar:sonar \
           -Dsonar.login=$SONAR_TOKEN \
           -Dsonar.branch.name=main
+		  -Dsonar.branch.target=main
