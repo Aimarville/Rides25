@@ -26,10 +26,10 @@ public class FindRidesGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 
-	private JComboBox<String> jComboBoxOrigin = new JComboBox<String>();
+	private JComboBox<String> jComboBoxOrigin = createJComboBox();
 	DefaultComboBoxModel<String> originLocations = new DefaultComboBoxModel<String>();
 
-	private JComboBox<String> jComboBoxDestination = new JComboBox<String>();
+	private JComboBox<String> jComboBoxDestination = createJComboBox();
 	DefaultComboBoxModel<String> destinationCities = new DefaultComboBoxModel<String>();
 
 	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.LeavingFrom"));
@@ -57,6 +57,10 @@ public class FindRidesGUI extends JFrame {
 			ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.NPlaces"), 
 			ResourceBundle.getBundle(ApplicationLauncher.ET).getString("FindRidesGUI.Price")
 	};
+	
+	private JComboBox<String> createJComboBox() {
+		return new JComboBox<>();
+	}
 
 
 	public FindRidesGUI()
