@@ -201,21 +201,16 @@ public class DataAccess  {
 	public List<Date> getThisMonthDatesWithRides(String from, String to, Date date) {
 		System.out.println(">> DataAccess: getEventsMonth");
 		List<Date> res = new ArrayList<>();	
-		
 		Date firstDayMonthDate= UtilDate.firstDayMonth(date);
 		Date lastDayMonthDate= UtilDate.lastDayMonth(date);
-				
-		
-		TypedQuery<Date> query = db.createQuery("SELECT DISTINCT r.date FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date BETWEEN ?3 and ?4",Date.class);   
-		
+		TypedQuery<Date> query = db.createQuery("SELECT DISTINCT r.date FROM Ride r WHERE r.from=?1 AND r.to=?2 AND r.date BETWEEN ?3 and ?4",Date.class);
 		query.setParameter(1, from);
 		query.setParameter(2, to);
 		query.setParameter(3, firstDayMonthDate);
 		query.setParameter(4, lastDayMonthDate);
 		List<Date> dates = query.getResultList();
-	 	 for (Date d:dates){
+	 	 for (Date d:dates)
 		   res.add(d);
-		  }
 	 	return res;
 	}
 	
@@ -703,46 +698,58 @@ public void open(){
 		db.getTransaction().commit();
 		if (u.getType().equals("Driver")) {
 			Driver d = (Driver) u;
-			if (d.getRides() != null) {
-				for (Ride r : d.getRides()) {
-					deleteRide(r.getRideNumber(), d.getEmail());
-				}
-			}
-			for (Car ca : d.getCars()) {
-				deleteCar(ca.getlicensePlate());
-			}
-			for (Mugimenduak mu : d.getMugimenduak()) {
-				deleteMugimendua(mu.getMugiZenb());
-			}
-			db.getTransaction().begin();
-			d = db.find(Driver.class, u.getEmail());
-			d.getRides().clear();
-		    d.getCars().clear();
-		    d.getMugimenduak().clear();
-			db.remove(d);
-			db.getTransaction().commit();
+			deleteDriverUser(u, d);
 			res = true;
 		}else {
 			Passenger p = (Passenger) u;
-			for (RideBooked rb : p.getBookedrides()) {
-				deleteRideBooked(rb.getBookNumber());
-			}
-			for (Mugimenduak mu : p.getMugimenduak()) {
-				deleteMugimendua(mu.getMugiZenb());
-			}
-			for (Alerta al : p.getAlerts()) {
-				deleteAlerta(al.getZenb());
-			}
-			db.getTransaction().begin();
-			p = db.find(Passenger.class, u.getEmail());
-			p.getBookedrides().clear();
-		    p.getMugimenduak().clear();
-		    p.getAlerts().clear();
-			db.remove(p);
-			db.getTransaction().commit();
+			deletePassengerUser(u, p);
 			res = true;
 		}
 		return res;
+	}
+	
+	private void deleteDriverUser(User u, Driver d) {
+		if (d.getRides() != null) {
+			deleteDriverRides(d);
+		}
+		for (Car ca : d.getCars()) {
+			deleteCar(ca.getlicensePlate());
+		}
+		for (Mugimenduak mu : d.getMugimenduak()) {
+			deleteMugimendua(mu.getMugiZenb());
+		}
+		db.getTransaction().begin();
+		d = db.find(Driver.class, u.getEmail());
+		d.getRides().clear();
+	    d.getCars().clear();
+	    d.getMugimenduak().clear();
+		db.remove(d);
+		db.getTransaction().commit();
+	}
+	
+	private void deleteDriverRides(Driver d) {
+		for (Ride r : d.getRides()) {
+			deleteRide(r.getRideNumber(), d.getEmail());
+		}
+	}
+	
+	private void deletePassengerUser(User u, Passenger p) {
+		for (RideBooked rb : p.getBookedrides()) {
+			deleteRideBooked(rb.getBookNumber());
+		}
+		for (Mugimenduak mu : p.getMugimenduak()) {
+			deleteMugimendua(mu.getMugiZenb());
+		}
+		for (Alerta al : p.getAlerts()) {
+			deleteAlerta(al.getZenb());
+		}
+		db.getTransaction().begin();
+		p = db.find(Passenger.class, u.getEmail());
+		p.getBookedrides().clear();
+	    p.getMugimenduak().clear();
+	    p.getAlerts().clear();
+		db.remove(p);
+		db.getTransaction().commit();
 	}
 	
 	public void deleteCar(String cPlate) {
