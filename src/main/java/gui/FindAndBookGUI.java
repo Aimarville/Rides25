@@ -30,11 +30,11 @@ public class FindAndBookGUI extends JFrame {
 
 	Passenger passenger;
 
-	private JComboBox<String> jComboBoxOrigin = new JComboBox<String>();
-	DefaultComboBoxModel<String> originLocations = new DefaultComboBoxModel<String>();
+	private JComboBox<String> jComboBoxOrigin = createJComboBox();
+	DefaultComboBoxModel<String> originLocations = createDefComboBoxModel();
 
-	private JComboBox<String> jComboBoxDestination = new JComboBox<String>();
-	DefaultComboBoxModel<String> destinationCities = new DefaultComboBoxModel<String>();
+	private JComboBox<String> jComboBoxDestination = createJComboBox();
+	DefaultComboBoxModel<String> destinationCities = createDefComboBoxModel();
 
 	private JLabel jLabelOrigin = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.LeavingFrom"));
 	private JLabel jLabelDestination = new JLabel(ResourceBundle.getBundle(ApplicationLauncher.ET).getString("CreateRideGUI.GoingTo"));
@@ -325,5 +325,13 @@ public class FindAndBookGUI extends JFrame {
 	}
 	private void jButton2_actionPerformed(ActionEvent e) {
 		this.setVisible(false);
+	}
+	
+	public DefaultComboBoxModel<String> createDefComboBoxModel(){
+		return new DefaultComboBoxModel<String>();
+	}
+	
+	public JComboBox<String> createJComboBox(){
+		return new JComboBox<String>();
 	}
 }

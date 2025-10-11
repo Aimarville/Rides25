@@ -140,20 +140,20 @@ public class DataAccess  {
 	 * @throws RideMustBeLaterThanTodayException if the ride date is before today 
  	 * @throws RideAlreadyExistException if the same ride already exists for the driver
 	 */
-	public Ride createRide(String from, String to, Date date, int nPlaces, float price, Car car, String driverEmail) throws  RideAlreadyExistException, RideMustBeLaterThanTodayException {
-		System.out.println(">> DataAccess: createRide=> from= "+from+" to= "+to+" driver="+driverEmail+" date "+date);
+	public Ride createRide(String rideAndDriverInfo[], Date date, float rideValues[], Car car) throws  RideAlreadyExistException, RideMustBeLaterThanTodayException {
+		System.out.println(">> DataAccess: createRide=> from= "+rideAndDriverInfo[0]+" to= "+rideAndDriverInfo[1]+" driver="+rideAndDriverInfo[2]+" date "+date);
 		try {
 			if(new Date().compareTo(date)>0) {
 				throw new RideMustBeLaterThanTodayException(ResourceBundle.getBundle("Etiquetas").getString("CreateRideGUI.ErrorRideMustBeLaterThanToday"));
 			}
 			db.getTransaction().begin();
 			
-			Driver driver = db.find(Driver.class, driverEmail);
-			if (driver.doesRideExists(from, to, date)) {
+			Driver driver = db.find(Driver.class, rideAndDriverInfo[2]);
+			if (driver.doesRideExists(rideAndDriverInfo[0], rideAndDriverInfo[1], date)) {
 				db.getTransaction().commit();
 				throw new RideAlreadyExistException(ResourceBundle.getBundle("Etiquetas").getString("DataAccess.RideAlreadyExist"));
 			}
-			Ride ride = driver.addRide(from, to, date, nPlaces, price, car);
+			Ride ride = driver.addRide(rideAndDriverInfo[0], rideAndDriverInfo[1], date, (int) rideValues[0], rideValues[1], car);
 			//next instruction can be obviated
 			db.persist(driver); 
 			db.getTransaction().commit();
@@ -164,8 +164,6 @@ public class DataAccess  {
 			db.getTransaction().commit();
 			return null;
 		}
-		
-		
 	}
 	
 	/**
@@ -240,19 +238,15 @@ public void open(){
 	
 	public boolean login(String email, String password, String type) {
 		List<User> res = null;
-		
 		TypedQuery<User> query = db.createQuery("SELECT u FROM User u WHERE u.email=?1 AND u.password=?2 AND u.type=?3",User.class); 
-		
 		query.setParameter(1, email);
 		query.setParameter(2, password);
 		query.setParameter(3, type);
 	 	res = query.getResultList();
-	 	
 	 	if(res.size()!=0){
 	 		return true;
 	 	}else {
-	 		return false;
-	 	}
+	 		return false;}
 	}
 	
 	public boolean register(String email, String password, String type) {
@@ -811,10 +805,8 @@ public void open(){
 			query.setParameter(2, al.getDestination());
 			List<Ride> rides = query.getResultList();
 			for(int i = 0; i<rides.size();i++) {
-				if(rides.get(i).getDate().getDay()==al.getDate().getDay()) {
-					if(rides.get(i).getDate().after(today)) {
-						resu.add(rides.get(i));
-					}
+				if(rides.get(i).getDate()==al.getDate() && rides.get(i).getDate().after(today)) {
+					resu.add(rides.get(i));
 				}
 			}
 		}
