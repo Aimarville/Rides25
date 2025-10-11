@@ -228,7 +228,8 @@ public class BLFacadeImplementation  implements BLFacade {
    @WebMethod
    public boolean addCar(String license, String brand, String color, int seats,  String dGmail) {
 	   dbManager.open();
-		boolean res = dbManager.addCar(license, brand, color, seats, dGmail);
+	   String carAttributes[] = {license, brand, color};
+		boolean res = dbManager.addCar(carAttributes, seats, dGmail);
 		dbManager.close();
 		return res;
    }

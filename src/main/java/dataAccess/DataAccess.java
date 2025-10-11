@@ -562,13 +562,13 @@ public void open(){
 		
 		return ps.getWallet();
 	}
-	public boolean addCar(String license, String brand, String color, int seats,  String dGmail) {
+	public boolean addCar(String[] carAttributes, int seats,  String dGmail) {
 		db.getTransaction().begin();
 		Driver dr = null;
 		dr = db.find(Driver.class, dGmail);
 		
 		Car ca = null;
-		ca = dr.addCar(license, brand, color,seats, dr);
+		ca = dr.addCar(carAttributes[0], carAttributes[1], carAttributes[2],seats, dr);
 		db.persist(dr);
 		db.getTransaction().commit();
 		if(ca!=null) {
