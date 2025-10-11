@@ -1,5 +1,5 @@
 package deleteRideTest;
-//Frog
+//Froga
 import static org.junit.Assert.*;
 
 import java.text.*;
