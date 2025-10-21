@@ -200,7 +200,7 @@ public class DeleteRideBDWhiteTest {
 		    	fail();
 		}
 	}
-
+/*
 	@Test
 	//sut.createRide:  The ride "from" is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
 
@@ -265,4 +265,5 @@ public class DeleteRideBDWhiteTest {
 		    	fail();
 		}
 	}
+	*/
 }

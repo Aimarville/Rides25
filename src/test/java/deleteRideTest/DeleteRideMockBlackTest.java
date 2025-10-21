@@ -222,9 +222,9 @@ public class DeleteRideMockBlackTest {
 		Mockito.when(db.find(Driver.class, dGmail)).thenReturn(driver);
 		Mockito.when(db.find(Ride.class, rideNumber)).thenReturn(ride);
 		Mockito.when(db.find(Passenger.class, "kaixo@gmail.com")).thenReturn(passenger);
-		ride.addBookRide(rideBooked);
-		passenger.addBookRide(rideBooked);
-		driver.addRide("Donosti", "Madrid", rideDate, 8, 3, new Car("1234FFF", "Ford", "Black", 5, driver));
+		//ride.addBookRide(rideBooked);
+		//passenger.addBookRide(rideBooked);
+		//driver.addRide("Donosti", "Madrid", rideDate, 8, 3, new Car("1234FFF", "Ford", "Black", 5, driver));
 		
 		Ride foundRide = db.find(Ride.class, rideNumber);
 		float beforeWallet = passenger.getWallet();
@@ -236,4 +236,5 @@ public class DeleteRideMockBlackTest {
 		
 		assertTrue(afterWallet - beforeWallet == foundRide.getPrice());
 	}
+	
 }

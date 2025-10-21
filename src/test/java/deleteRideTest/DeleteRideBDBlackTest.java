@@ -351,4 +351,5 @@ public class DeleteRideBDBlackTest {
 				testDA.close();
 			}
 		}
+		
 }

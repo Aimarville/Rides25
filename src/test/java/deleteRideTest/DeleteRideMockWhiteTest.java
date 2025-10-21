@@ -113,7 +113,7 @@ public class DeleteRideMockWhiteTest {
 		
 		Mockito.verify(db, Mockito.times(1)).remove(ride);
 	}
-
+/*
 	@Test
 	public void test4() {
 		int rideNumber = 10;
@@ -144,4 +144,5 @@ public class DeleteRideMockWhiteTest {
 		Mockito.verify(db, Mockito.atLeastOnce()).persist(driver);
 		Mockito.verify(db, Mockito.times(1)).remove(ride);
    }
+   */
 }

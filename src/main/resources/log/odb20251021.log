@@ -1,0 +1,464 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:07:46 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 2936@U032849
+
+[2025-10-21 11:07:46 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:07:46 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:07:46 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:07:46 #5 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:07:46 #6 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:07:46 #7 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:07:46 #8 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:07:46 #9 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:07:46 #10 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-10-21 11:07:46 #11 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2025-10-21 11:07:46 #12 type.registry] 
+New type java.util.ArrayList<domain.Mugimenduak>
+
+[2025-10-21 11:07:46 #13 type.registry] 
+New type java.util.ArrayList<domain.Ride>
+
+[2025-10-21 11:07:46 #14 type.registry] 
+New type java.util.ArrayList<domain.RideBooked>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:08:18 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 262-315)
+
+[2025-10-21 11:08:18 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 17240@U032849
+
+[2025-10-21 11:08:18 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:08:18 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:08:18 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:08:18 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:08:18 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:08:18 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:08:18 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:08:18 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:08:18 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:08:38 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 316-363)
+
+[2025-10-21 11:08:38 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 8696@U032849
+
+[2025-10-21 11:08:38 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:08:38 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:08:38 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:08:38 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:08:38 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:08:38 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:08:38 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:08:38 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:08:38 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:17:01 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 364-413)
+
+[2025-10-21 11:17:01 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 15988@U032849
+
+[2025-10-21 11:17:01 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:17:01 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:17:01 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:17:01 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:17:01 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:17:01 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:17:01 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:17:01 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:17:01 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:21:08 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 414-463)
+
+[2025-10-21 11:21:09 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 11024@U032849
+
+[2025-10-21 11:21:09 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:21:09 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:21:09 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:21:09 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:21:09 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:21:09 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:21:09 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:21:09 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:21:09 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:22:06 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 465-468)
+
+[2025-10-21 11:22:06 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 18396@U032849
+
+[2025-10-21 11:22:06 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:22:06 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:22:06 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:22:06 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:22:06 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:22:06 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:22:06 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:22:06 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:22:06 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:22:56 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 470-473)
+
+[2025-10-21 11:22:57 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 22376@U032849
+
+[2025-10-21 11:22:57 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:22:57 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:22:57 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:22:57 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:22:57 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:22:57 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:22:57 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:22:57 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:22:57 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:23:26 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 474-475)
+
+[2025-10-21 11:23:27 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 19260@U032849
+
+[2025-10-21 11:23:27 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:23:27 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:23:27 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:23:27 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:23:27 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:23:27 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:23:27 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:23:27 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:23:27 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:23:54 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 476-479)
+
+[2025-10-21 11:23:54 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 4796@U032849
+
+[2025-10-21 11:23:54 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:23:54 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:23:54 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:23:54 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:23:54 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:23:54 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:23:54 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:23:54 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:23:54 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:24:11 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 480-483)
+
+[2025-10-21 11:24:11 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 20476@U032849
+
+[2025-10-21 11:24:11 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:24:11 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:24:11 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:24:11 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:24:11 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:24:11 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:24:11 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:24:11 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:24:11 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:24:35 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 484-487)
+
+[2025-10-21 11:24:35 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 20896@U032849
+
+[2025-10-21 11:24:35 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:24:35 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:24:35 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:24:35 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:24:35 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:24:35 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:24:35 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:24:35 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:24:35 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:28:44 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 488-496)
+
+[2025-10-21 11:28:44 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 14404@U032849
+
+[2025-10-21 11:28:44 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:28:45 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:28:45 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:28:45 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:28:45 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:28:45 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:28:45 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:28:45 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:28:45 #11 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-10-21 11:30:14 #1 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 498-510)
+
+[2025-10-21 11:30:14 #2 store] 
+Database 'C:\Users\ehu\git\Rides25\src\main\resources\rides.temp' is opened by 1280@U032849
+
+[2025-10-21 11:30:15 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-10-21 11:30:15 #4 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-10-21 11:30:15 #5 type] 
+Type domain.Driver is not enhanced.
+
+[2025-10-21 11:30:15 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-10-21 11:30:15 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-10-21 11:30:15 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-10-21 11:30:15 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-10-21 11:30:15 #10 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-10-21 11:30:15 #11 type] 
+Type domain.Alerta is not enhanced.
+
