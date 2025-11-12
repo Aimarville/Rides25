@@ -17,7 +17,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 
 import domain.Driver;
-
+import factories.*;
 import businessLogic.*;
 
 public class ApplicationLauncher { 
@@ -35,11 +35,11 @@ public class ApplicationLauncher {
 		System.out.println("Locale: "+Locale.getDefault());
 		
 	    Driver driver=new Driver("driver3@gmail.com","Test Driver");
-
 		
 		HomeGUI a=new HomeGUI();
 		a.setVisible(true);
-
+		
+		BLFactory factory;
 
 		try {
 			
@@ -47,33 +47,14 @@ public class ApplicationLauncher {
 			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 			
 			if (c.isBusinessLogicLocal()) {
-			
-				DataAccess da= new DataAccess();
-				appFacadeInterface=new BLFacadeImplementation(da);
-
-				
-			}
-			
-			else { //If remote
-				
-				 String serviceName= "http://"+c.getBusinessLogicNode() +":"+ c.getBusinessLogicPort()+"/ws/"+c.getBusinessLogicName()+"?wsdl";
-				 
-				URL url = new URL(serviceName);
-
-		 
-		        //1st argument refers to wsdl document above
-				//2nd argument is service name, refer to wsdl document above
-		        QName qname = new QName("http://businessLogic/", "BLFacadeImplementationService");
-		 
-		        Service service = Service.create(url, qname);
-
-		         appFacadeInterface = service.getPort(BLFacade.class);
+				factory = new LocalBLFactory();
+			}else { //If remote
+				factory = new RemoteBLFactory();
 			} 
 			
+			appFacadeInterface = factory.createBLFacade();
+			
 			HomeGUI.setBussinessLogic(appFacadeInterface);
-
-		
-
 			
 		}catch (Exception e) {
 			a.jLabelSelectOption.setText("Error: "+e.toString());
