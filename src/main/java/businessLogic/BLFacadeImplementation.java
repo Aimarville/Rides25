@@ -8,6 +8,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import domain.*;
 import exceptions.*;
+import iterators.*;
 
 /**
  * It implements the business logic as a web service.
@@ -29,6 +30,16 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		dbManager=da;		
 	}
+    
+    public ExtendedIterator<String> getDepartingCitiesIterator(){
+    	dbManager.open();
+    	
+    	ExtendedIterator<String> departLocationsIterator = new ExtendedIteratorCities(dbManager.getDepartCities());
+    	
+    	dbManager.close();
+    	
+    	return departLocationsIterator;
+    }
     
     
     /**
@@ -230,7 +241,7 @@ public class BLFacadeImplementation  implements BLFacade {
    @WebMethod
    public boolean addCar(String license, String brand, String color, int seats,  String dGmail) {
 	   dbManager.open();
-	   String carAttributes[] = {license, brand, color};
+	   String[] carAttributes = {license, brand, color};
 		boolean res = dbManager.addCar(carAttributes, seats, dGmail);
 		dbManager.close();
 		return res;

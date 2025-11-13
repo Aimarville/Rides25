@@ -4,6 +4,7 @@ import java.util.*;
 
 import domain.*;
 import exceptions.*;
+import iterators.ExtendedIterator;
 
 import javax.jws.*;
  
@@ -13,6 +14,8 @@ import javax.jws.*;
 @WebService
 public interface BLFacade  {
 	  
+	public ExtendedIterator<String> getDepartingCitiesIterator();
+		
 	/**
 	 * This method returns all the cities where rides depart 
 	 * @return collection of cities

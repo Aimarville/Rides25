@@ -1,0 +1,422 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:38:08 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 46616@DESKTOP-D7GP777
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:38:56 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 56268@DESKTOP-D7GP777
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:39:35 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 41652@DESKTOP-D7GP777
+
+[2025-11-13 20:39:45 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 20:39:45 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:39:45 #4 type.registry] 
+New type domain.Mugimenduak
+
+[2025-11-13 20:39:45 #5 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:39:54 #6 type.registry] 
+New type domain.Driver
+
+[2025-11-13 20:39:54 #7 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:39:54 #8 type.registry] 
+New type domain.Erreklamazioa
+
+[2025-11-13 20:39:54 #9 type.registry] 
+New type domain.Car
+
+[2025-11-13 20:39:54 #10 type.registry] 
+New type domain.Ride
+
+[2025-11-13 20:39:54 #11 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:39:54 #12 type.registry] 
+New type domain.RideBooked
+
+[2025-11-13 20:39:54 #13 type.registry] 
+New type domain.Passenger
+
+[2025-11-13 20:39:54 #14 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:39:54 #15 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:39:54 #16 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:39:54 #17 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:39:54 #18 type.registry] 
+New type domain.Alerta
+
+[2025-11-13 20:39:54 #19 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-11-13 20:39:54 #20 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2025-11-13 20:39:54 #21 type.registry] 
+New type java.util.ArrayList<domain.Mugimenduak>
+
+[2025-11-13 20:39:54 #22 type.registry] 
+New type java.util.ArrayList<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:45:25 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 56140@DESKTOP-D7GP777
+
+[2025-11-13 20:45:29 #2 type.registry] 
+New type domain.User
+
+[2025-11-13 20:45:29 #3 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:45:29 #4 type.registry] 
+New type domain.Mugimenduak
+
+[2025-11-13 20:45:29 #5 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:45:40 #6 type.registry] 
+New type domain.Driver
+
+[2025-11-13 20:45:40 #7 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:45:40 #8 type.registry] 
+New type domain.Erreklamazioa
+
+[2025-11-13 20:45:40 #9 type.registry] 
+New type domain.Car
+
+[2025-11-13 20:45:40 #10 type.registry] 
+New type domain.Ride
+
+[2025-11-13 20:45:40 #11 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:45:40 #12 type.registry] 
+New type domain.RideBooked
+
+[2025-11-13 20:45:40 #13 type.registry] 
+New type domain.Passenger
+
+[2025-11-13 20:45:40 #14 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:45:40 #15 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:45:40 #16 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:45:40 #17 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:45:40 #18 type.registry] 
+New type domain.Alerta
+
+[2025-11-13 20:45:40 #19 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-11-13 20:45:40 #20 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2025-11-13 20:45:40 #21 type.registry] 
+New type java.util.ArrayList<domain.Mugimenduak>
+
+[2025-11-13 20:45:40 #22 type.registry] 
+New type java.util.ArrayList<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:47:25 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 55796@DESKTOP-D7GP777
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:49:32 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 55396@DESKTOP-D7GP777
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:51:38 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' has been recovered (tr. 1-2)
+
+[2025-11-13 20:51:38 #2 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 53432@DESKTOP-D7GP777
+
+[2025-11-13 20:51:47 #3 type.registry] 
+New type domain.User
+
+[2025-11-13 20:51:47 #4 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:51:47 #5 type.registry] 
+New type domain.Mugimenduak
+
+[2025-11-13 20:51:47 #6 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:51:54 #7 type.registry] 
+New type domain.Driver
+
+[2025-11-13 20:51:54 #8 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:51:54 #9 type.registry] 
+New type domain.Erreklamazioa
+
+[2025-11-13 20:51:54 #10 type.registry] 
+New type domain.Car
+
+[2025-11-13 20:51:54 #11 type.registry] 
+New type domain.Ride
+
+[2025-11-13 20:51:54 #12 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:51:54 #13 type.registry] 
+New type domain.RideBooked
+
+[2025-11-13 20:51:54 #14 type.registry] 
+New type domain.Passenger
+
+[2025-11-13 20:51:54 #15 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:51:54 #16 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:51:54 #17 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:51:54 #18 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:51:54 #19 type.registry] 
+New type domain.Alerta
+
+[2025-11-13 20:51:54 #20 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-11-13 20:51:54 #21 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2025-11-13 20:51:54 #22 type.registry] 
+New type java.util.ArrayList<domain.Mugimenduak>
+
+[2025-11-13 20:51:54 #23 type.registry] 
+New type java.util.ArrayList<domain.Ride>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:53:02 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 54536@DESKTOP-D7GP777
+
+[2025-11-13 20:53:02 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:53:02 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:53:02 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:53:02 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:53:02 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:53:02 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:53:02 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:53:02 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:53:02 #10 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:53:39 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 49524@DESKTOP-D7GP777
+
+[2025-11-13 20:53:39 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:53:39 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:53:39 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:53:39 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:53:39 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:53:39 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:53:39 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:53:39 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:53:39 #10 type] 
+Type domain.Alerta is not enhanced.
+
+[2025-11-13 20:53:58 #11 type.registry] 
+New type java.util.ArrayList<domain.RideBooked>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:54:55 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 37488@DESKTOP-D7GP777
+
+[2025-11-13 20:54:55 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:54:55 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:54:55 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:54:55 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:54:55 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:54:55 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:54:55 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:54:55 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:54:55 #10 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:55:42 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 11768@DESKTOP-D7GP777
+
+[2025-11-13 20:55:42 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:55:42 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:55:42 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:55:42 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:55:42 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:55:42 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:55:42 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:55:42 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:55:42 #10 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:56:01 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 56332@DESKTOP-D7GP777
+
+[2025-11-13 20:56:01 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:56:01 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:56:01 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:56:01 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:56:01 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:56:01 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:56:01 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:56:01 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:56:01 #10 type] 
+Type domain.Alerta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-11-13 20:56:23 #1 store] 
+Database 'C:\Users\asier\git\Rides25\src\main\resources\rides.temp' is opened by 50232@DESKTOP-D7GP777
+
+[2025-11-13 20:56:23 #2 type] 
+Type domain.User is not enhanced.
+
+[2025-11-13 20:56:23 #3 type] 
+Type domain.Mugimenduak is not enhanced.
+
+[2025-11-13 20:56:23 #4 type] 
+Type domain.Driver is not enhanced.
+
+[2025-11-13 20:56:23 #5 type] 
+Type domain.Erreklamazioa is not enhanced.
+
+[2025-11-13 20:56:23 #6 type] 
+Type domain.Car is not enhanced.
+
+[2025-11-13 20:56:23 #7 type] 
+Type domain.Ride is not enhanced.
+
+[2025-11-13 20:56:23 #8 type] 
+Type domain.RideBooked is not enhanced.
+
+[2025-11-13 20:56:23 #9 type] 
+Type domain.Passenger is not enhanced.
+
+[2025-11-13 20:56:23 #10 type] 
+Type domain.Alerta is not enhanced.
+
