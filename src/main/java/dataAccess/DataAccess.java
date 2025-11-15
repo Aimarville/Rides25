@@ -811,4 +811,8 @@ public void open(){
 		}
 		return resu;
 	}
+	
+	public Driver getDriver(String dMail) {
+		return db.find(Driver.class, dMail);
+	}
 }

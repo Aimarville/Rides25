@@ -14,7 +14,7 @@ import javax.jws.*;
 @WebService
 public interface BLFacade  {
 	  
-	public ExtendedIterator<String> getDepartingCitiesIterator();
+	@WebMethod public ExtendedIterator<String> getDepartingCitiesIterator();
 		
 	/**
 	 * This method returns all the cities where rides depart 
@@ -123,4 +123,6 @@ public interface BLFacade  {
 	 @WebMethod public void createAlert(String origin, String destination, Date date, String pGmail);
 	 
 	 @WebMethod public List<Ride> getAlertRides(String pGmail);
+	 
+	 @WebMethod public Driver getDriver(String dMail);
 }

@@ -31,6 +31,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager=da;		
 	}
     
+    @WebMethod
     public ExtendedIterator<String> getDepartingCitiesIterator(){
     	dbManager.open();
     	
@@ -318,6 +319,14 @@ public class BLFacadeImplementation  implements BLFacade {
 	   List<Ride> res = dbManager.getAlertRides(pGmail);
 	   dbManager.close();
 	   return res;
+   }
+   
+   @WebMethod
+   public Driver getDriver(String dMail) {
+	   dbManager.open();
+	   Driver d = dbManager.getDriver(dMail);
+	   dbManager.close();
+	   return d;
    }
 }
 

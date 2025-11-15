@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		BLFacade	blFacade =	new LocalBLFactory().createBLFacade();
-		ExtendedIterator<String>	i =	blFacade.getDepartingCitiesIterator();
+		ExtendedIterator<String> i = blFacade.getDepartingCitiesIterator();
 		
 		String c;
 		System.out.println("_____________________");
